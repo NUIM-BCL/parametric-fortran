@@ -6,7 +6,7 @@ import FortranP
 import Param
 import ParseMonad
 import Scanner --(lexer, Token(..))
-import Char (toLower)
+import Data.Char (toLower)
 import GHC.Exts
 
 happyError :: P a

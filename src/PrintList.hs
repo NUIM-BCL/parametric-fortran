@@ -4,7 +4,7 @@
 module PrintList where
              
 
-import List (intersperse)
+import Data.List (intersperse)
 
 
 ----------------------------------------------------------------------

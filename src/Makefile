@@ -1,7 +1,7 @@
 all: ../bin/pfc
 
 GHC = ghc
-GHCFLAGS = -fglasgow-exts -fallow-overlapping-instances -fallow-undecidable-instances -O
+GHCFLAGS = -fglasgow-exts -XOverlappingInstances -XUndecidableInstances -O
 
 generated_hs = Scanner.hs FParser.hs
 

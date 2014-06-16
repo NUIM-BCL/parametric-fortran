@@ -7,10 +7,10 @@ import Parameters (param)
 import Finalize  (finalize)
 import Transform (genF)
 import ParamV (subst)
-import System (getArgs)
+import System.Environment (getArgs)
 import FParser (parse,parseF)
 import Optimize (optimize)
-import List
+import Data.List
 import Pretty
 import PPrint
 

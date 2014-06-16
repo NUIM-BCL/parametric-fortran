@@ -5,7 +5,7 @@ module Finalize where
 
 import FortranP
 import Param
-import List (nubBy)
+import Data.List (nubBy)
 import Data.Generics
 import Param
 

@@ -1,6 +1,6 @@
 {
 module Scanner where
-import Char
+import Data.Char
 import ParseMonad
 }
 

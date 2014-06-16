@@ -8,7 +8,7 @@ module Pretty where
 import FortranP
 import Param
 import PPrint
-import List (null)
+import Data.List (null)
 
 instance Pretty Program where 
   pretty (Sub p n a b)    = pretty p <+> text "subroutine" <+> (pretty n) <> pretty a 

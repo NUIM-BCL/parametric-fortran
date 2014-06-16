@@ -16,9 +16,9 @@ import Data.Generics
 
 import PrintList      -- some print utilities for lists
 import Param          -- definition of language parameters
-import Maybe
+import Data.Maybe
 import Scanner 
-import List
+import Data.List
 import Reading
 import ReadP
 

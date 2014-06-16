@@ -7,7 +7,7 @@
 
 module Access where
 
-import List (replicate)
+import Data.List (replicate)
 
 import FortranP
 import Param

@@ -1,0 +1,55 @@
+module Parameters where
+
+import PResidual
+import Replace
+import Record
+import Test
+import Cond
+import Linearize
+import SimpleDim
+import Dim
+import Slice
+import Monad
+import ParamV
+import ParamList
+import Param
+import ReadP
+import Files
+import System.IO.Unsafe (unsafePerformIO)
+import FortranP
+
+ps :: [(String, String)]
+ps = read (unsafePerformIO (readFiles ["paramVals",                                       "..\\examples\\paramVals", 
+                                       "../examples/paramVals"]))
+
+consPList :: [(String, String)] -> PList
+consPList [] = []
+consPList ((v, s):pvs) = (VarName v, readParam (VarName v) s) : consPList pvs
+
+tompv :: (AccessClass p) => Maybe p -> Maybe ParV
+tompv (Just p) = Just (ParV p)
+tompv Nothing  = Nothing
+
+readParam v s = (\(Just x) -> x) (
+  tompv (readP s :: Maybe PResidual) `mplus`
+  tompv ((readP s :: Maybe [PResidual]) >>= \x -> Just (RepList v x)) `mplus`
+  tompv (readP s :: Maybe Replace) `mplus`
+  tompv ((readP s :: Maybe [Replace]) >>= \x -> Just (RepList v x)) `mplus`
+  tompv (readP s :: Maybe Record) `mplus`
+  tompv ((readP s :: Maybe [Record]) >>= \x -> Just (RepList v x)) `mplus`
+  tompv (readP s :: Maybe Test) `mplus`
+  tompv ((readP s :: Maybe [Test]) >>= \x -> Just (RepList v x)) `mplus`
+  tompv (readP s :: Maybe Cond) `mplus`
+  tompv ((readP s :: Maybe [Cond]) >>= \x -> Just (RepList v x)) `mplus`
+  tompv (readP s :: Maybe Linearize) `mplus`
+  tompv ((readP s :: Maybe [Linearize]) >>= \x -> Just (RepList v x)) `mplus`
+  tompv (readP s :: Maybe SimpleDim) `mplus`
+  tompv ((readP s :: Maybe [SimpleDim]) >>= \x -> Just (RepList v x)) `mplus`
+  tompv (readP s :: Maybe Dim) `mplus`
+  tompv ((readP s :: Maybe [Dim]) >>= \x -> Just (RepList v x)) `mplus`
+  tompv (readP s :: Maybe Slice) `mplus`
+  tompv ((readP s :: Maybe [Slice]) >>= \x -> Just (RepList v x)) `mplus`
+  Just (ParV Void))
+
+param :: PList
+param = consPList ps

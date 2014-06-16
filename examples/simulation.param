@@ -1,0 +1,3 @@
+stateVars = [{dim=SimpleDim 3, name=RVar "temperature"},
+             {dim=SimpleDim 2, name=RVar "velocity"}]
+

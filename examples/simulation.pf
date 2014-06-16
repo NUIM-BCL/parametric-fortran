@@ -1,0 +1,14 @@
+program simulation
+  implicit none
+  {#stateVars :
+    {stateVars.dim : real, allocatable :: stateVars.name}
+  }
+  {#stateVars:
+    allocate(stateVars.name(stateVars.dim.bounds))
+    call readData(stateVars.name)
+    call runComputation(stateVars.name)
+    call writeOut(stateVars.name)
+    deallocate(stateVars.name)
+  }
+end program simulation
+

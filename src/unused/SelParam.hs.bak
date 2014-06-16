@@ -1,0 +1,102 @@
+-- SelParam.hs
+--
+
+module Main where
+
+import System (getArgs, getEnv)
+import IO (try)
+import Files
+
+main :: IO ()
+main = do
+          pfhome <- try (getEnv "PFHOME")
+          case pfhome of
+            Left er   -> 
+             do
+              putStr ("You have not defined the environment variable PFHOME.\n"
+                              ++ "Using current directory instead.\n")
+              let dir = "."
+              let pfwin  = dirwin dir 
+              let pfunix = dirunix dir
+              ptypes <- readFiles ["paramTypes", 
+                                   pfunix++"paramTypes", pfunix++"config/paramTypes",
+                                   pfwin ++"paramTypes", pfwin ++"config\\paramTypes",
+                                   "..\\config\\paramTypes", "../config/paramTypes"]
+              let ptList = read ptypes :: [String]
+              writeFile  "Parameters.hs"
+                         (genWholeModule ptList)
+
+            Right dir ->
+             do
+              let pfwin  = dirwin dir 
+              let pfunix = dirunix dir
+              ptypes <- readFiles ["paramTypes", 
+                                   pfunix++"paramTypes", pfunix++"config/paramTypes",
+                                   pfwin ++"paramTypes", pfwin ++"config\\paramTypes",
+                                   "..\\config\\paramTypes", "../config/paramTypes"]
+              let ptList = read ptypes :: [String]
+              writeFile  "Parameters.hs"
+                         (genWholeModule ptList)
+
+
+dirunix :: String -> String
+dirunix "" = ""
+dirunix s  = if last s == '/' then s
+             else s++"/"
+
+dirwin :: String -> String
+dirwin "" = ""
+dirwin s  = if last s == '\\' then s
+            else s++"\\"            
+
+
+--f g = catch g (\e -> if IO.isEOFError e then return [] else ioError e)
+
+
+genWholeModule :: [String] -> String
+genWholeModule ts = "module Parameters where\n\n" ++
+                    genImports ts ++ 
+                    "import Monad\n" ++
+                    "import ParamV\n" ++
+                    "import ParamList\n" ++
+                    "import Param\n" ++
+                    "import ReadP\n" ++
+                    "import Files\n" ++
+                    "import System.IO.Unsafe (unsafePerformIO)\n" ++
+                    "import FortranP\n\n" ++
+                    "ps :: [(String, String)]\n" ++
+                    "ps = read (unsafePerformIO (readFiles [\"paramVals\"," ++
+                    "                                       \"..\\\\examples\\\\paramVals\", \n" ++
+                    "                                       \"../examples/paramVals\"]))\n\n" ++
+                    "consPList :: [(String, String)] -> PList\n" ++
+                    "consPList [] = []\n" ++
+                    "consPList ((v, s):pvs) = (VarName v, readParam (VarName v) s) : consPList pvs\n\n" ++
+                    "tompv :: (AccessClass p) => Maybe p -> Maybe ParV\n" ++
+                    "tompv (Just p) = Just (ParV p)\n" ++
+                    "tompv Nothing  = Nothing\n\n" ++
+                    "readParam v s = (\\(Just x) -> x) (\n" ++
+                    genCaseStmts ts ++
+ --                   "readParam v s =\n" ++
+ --                   genCaseStmts 13 ts ++
+                    "\nparam :: PList\n" ++
+                    "param = consPList ps\n"
+{-
+genCaseStmts :: Int -> [String] -> String
+genCaseStmts n (t:ts) = replicate n ' ' ++ "case (readP s :: Maybe "++ t ++") of\n" ++
+                        replicate n ' ' ++ "  Just x -> ParV x\n"  ++
+                        replicate n ' ' ++ "  Nothing -> \n" ++
+                        replicate n ' ' ++ "    case (readP s :: Maybe ["++ t ++"]) of\n" ++
+                        replicate n ' ' ++ "      Just x -> ParV (RepList v x)\n"  ++
+                        replicate n ' ' ++ "      Nothing -> \n" ++ genCaseStmts (n+8) ts 
+-}
+genCaseStmts :: [String] -> String
+genCaseStmts (t:ts) = "  tompv (readP s :: Maybe "++ t ++") `mplus`\n" ++
+                      "  tompv ((readP s :: Maybe ["++ t ++"]) >>= \\x -> Just (RepList v x)) `mplus`\n" ++
+                      genCaseStmts ts 
+                
+genCaseStmts []     = "  Just (ParV Void))\n" 
+             
+genImports :: [String] -> String
+genImports (t:ts) = "import " ++ t ++ "\n" ++
+                    genImports ts
+genImports []     = ""                    

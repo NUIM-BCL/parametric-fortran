@@ -1,0 +1,7 @@
+subroutine slice(a, slice.inds, b)
+  {slice.n: real :: {a}}
+  {slice.o: real :: {b}}
+  integer :: slice.inds
+  {slice.o: b = {slice: a(slice.inds)}}
+end subroutine slice
+

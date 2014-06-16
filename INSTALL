@@ -1,0 +1,7 @@
+Parametric Fortran requires ghc 6.6
+
+To compile pfc goto src/ and run compile.sh (compile.bat on windows).
+
+The Parametric Fortran compiler will be in bin/ you can then 
+copy it to somewhere in your path.
+

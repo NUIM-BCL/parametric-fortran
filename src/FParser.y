@@ -21,11 +21,11 @@ mesg m = if m == "\n" then "end of line"
          else m
 --       where m    = tokenFollows s
 
-tokenFollows s = case alexScan ('\0',s) 0 of
+tokenFollows s = case alexScan ('\0',undefined,s) 0 of
                     AlexEOF               -> "end of file"
                     AlexError  _          -> ""
-                    AlexSkip  (_,t) len   -> tokenFollows t
-                    AlexToken (_,t) len _ -> take len s
+                    AlexSkip  (_,_,t) len   -> tokenFollows t
+                    AlexToken (_,_,t) len _ -> take len s
 
 parse :: String -> [ProgramP]
 parse p = clean (dropP ((catchP parser failP) p 1 (1,0,0)))

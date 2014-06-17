@@ -195,11 +195,11 @@ textFix (Text _) = 1
 textFix _        = 0
 
 lexer :: (Token -> P a) -> P a
-lexer cont s = case alexScan ('\0',s) 0 of
+lexer cont s = case alexScan ('\0',undefined,s) 0 of
                  AlexEOF                  -> cont TokEOF ""
                  AlexError _              -> \l c -> (FailP ("line " ++ show l ++ " column " ++ show c ++ ": unrecognizable token")) 
-                 AlexSkip  (_,s') len     -> \l c -> lexer cont s' l (fst3' c + snd3' c, trd3' c, len)
-                 AlexToken (_,s') len act -> if tok /= NewLine then \l c -> cont tok s' (l+textFix tok) (fst3' c + snd3' c, trd3' c, len)
+                 AlexSkip  (_,_,s') len     -> \l c -> lexer cont s' l (fst3' c + snd3' c, trd3' c, len)
+                 AlexToken (_,_,s') len act -> if tok /= NewLine then \l c -> cont tok s' (l+textFix tok) (fst3' c + snd3' c, trd3' c, len)
                                                                else \l c -> lexer cont s' (l+1) (1,0,len)
                                                 where tok = act (take len s)
 

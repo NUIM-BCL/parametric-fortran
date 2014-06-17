@@ -7,6 +7,9 @@
 --   Cond False    is removed
 --
 
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+
 module Cond (Cond (Cond)) where
 
 import Data.Generics

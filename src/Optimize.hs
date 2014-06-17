@@ -4,6 +4,8 @@
 -- source code
 --
 
+{-# LANGUAGE RankNTypes #-}
+
 module Optimize (optimize) where
 
 import FortranP

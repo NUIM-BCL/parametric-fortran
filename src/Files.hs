@@ -1,3 +1,5 @@
+{-# LANGUAGE ScopedTypeVariables #-}
+
 module Files where
 
 import Control.Exception (try, IOException)

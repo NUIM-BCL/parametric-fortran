@@ -3,6 +3,9 @@
 -- parameter type definition for array slicing
 --
 
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+
 module Slice where
 
 import Data.Generics

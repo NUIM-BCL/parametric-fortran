@@ -7,6 +7,9 @@
 -- Dim and IOMDim are more flexible.
 --
 
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+
 module SimpleDim (SimpleDim (SimpleDim)) where
 
 import Data.Generics

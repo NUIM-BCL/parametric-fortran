@@ -1,6 +1,10 @@
 -- ParamV.hs
 --
 
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE OverlappingInstances #-}
+
 module ParamV where
 
 import FortranP

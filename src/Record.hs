@@ -6,6 +6,9 @@
 -- and to get to them using accessors.
 --
 
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+
 module Record (Record (Record)) where
 
 import Data.Generics

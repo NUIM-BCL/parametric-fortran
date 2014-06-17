@@ -4,6 +4,9 @@
 -- in IOM tools
 --
 
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+
 module IOMDim where
 
 import Data.Generics

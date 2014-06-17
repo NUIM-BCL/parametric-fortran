@@ -3,6 +3,9 @@
 -- Parameter type definition for AD.
 --
 
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+
 module AutoDiff where
 
 import Data.Generics

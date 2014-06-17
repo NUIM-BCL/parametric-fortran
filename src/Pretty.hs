@@ -3,6 +3,9 @@
 -- Fortran pretty printer
 --
 
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE OverlappingInstances #-}
+
 module Pretty where
 
 import FortranP

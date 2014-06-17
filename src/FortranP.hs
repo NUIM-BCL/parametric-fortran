@@ -4,6 +4,14 @@
 -- A Fortran program generator implemented using the boilerplate approach and
 -- existential types
 --  
+
+{-# LANGUAGE RankNTypes #-}
+{-# LANGUAGE GADTs #-}
+{-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE UndecidableInstances #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+
 module FortranP where
 
 

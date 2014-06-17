@@ -4,6 +4,9 @@
 -- Used to enter a constant into a program.
 --
 
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+
 module Replace (Replace (..)) where
 
 import Data.Generics

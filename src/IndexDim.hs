@@ -4,6 +4,9 @@
 -- to be specified in the parameter value
 --
 
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+
 module IndexDim where
 
 import Data.Generics

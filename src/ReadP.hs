@@ -19,7 +19,7 @@ class ReadP p where
 instance (ReadP p) => ReadP [p] where
   readP "[]" = Just []
   readP ('[':s) = readPs (init s)
-    where readPs :: String -> Maybe [p]
+    where readPs :: ReadP p => String -> Maybe [p]
           readPs "" = Just []
           readPs s = case readP (nextToken s) of
                        Just a  -> case readPs (delToken s) of

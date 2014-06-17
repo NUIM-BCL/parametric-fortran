@@ -4,6 +4,10 @@
 -- as integers
 --
 
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+{-# LANGUAGE FlexibleInstances #-}
+
 module Dim where
 
 import Data.Generics

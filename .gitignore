@@ -1,0 +1,5 @@
+*.hi
+*.o
+/bin/pfc
+/src/FParser.hs
+/src/Scanner.hs

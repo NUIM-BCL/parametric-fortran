@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Martin Erwig">
+   <META NAME="KeyWords" CONTENT="Fortran, Program Generation, Haskell">
+   <TITLE>Parametric Fortran</TITLE>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28607288-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFEACA" LINK="#0000FF" VLINK="#551A8B" ALINK="#0000FF">
+
+<h1>
+Parametric Fortran
+</h1>
+
+
+<P>Parametric Fortran is a Fortran program-generator generator that can
+produce extensions of Fortran, specialized to support the programming of
+particular applications. Extensions are specified through parameter structures
+that can be referred to in Fortran programs to describe the dependency of
+program parts on these parameters. By providing parameter values, a
+parameterized Fortran program can be translated into a regular Fortran
+program.
+
+<p>
+To use the prototype implementation, download, gunzip, and untar
+the file <tt><a href="ghc7.0.2/pfc-2.0.zip">pfc-2.0.zip</a></tt>.
+
+Then follow the instructions contained in the file
+<tt>pfc-2.0/doc/pf-manual.pdf</tt>, which is also
+accessible here: <a href="pf-manual.pdf">pf-manual.pdf</a>.
+
+The above version of the compiler works with the Haskell compiler GHC 6.6.
+
+<p> (Here are two alternative implementations
+of the same Parametric Fortran compiler that works with 
+ <a href="ghc6.4/pfc-2.0.tar.gz">GHC 6.4</a>  and
+ <a href="ghc6.6/pfc-2.0.tar.gz">GHC 6.6</a>.)
+
+The version 
+of the Haskell compiler does not have to concern you at all if you all you
+want to do is to simply use the Parametric Fortran compiler with the provided
+parameter types.  However, if you want to define and use new parameter types,
+a recompilation of the Parametric Fortran compiler using GHC is required, and
+it is at this point where the version of GHC matters.
+
+
+<!--
+Here are some precompiled binaries of the Parametric Fortran compiler:
+
+<ul>
+<li> <a href="../../~fuzh/PF/pfc">Solaris</a>
+<li> <a href="../../~fuzh/PF/pfc.exe">Windows</a>
+<li> <a href="pfc">Mac OS X</a>
+</ul>
+-->
+
+<p>An overview of Parametric Fortran is provided in the following
+<a href="NCAR2006.pdf.gz">slides</a> 
+from a 
+<a href="http://www.cisl.ucar.edu/dir/06Seminars/erwigabs.html">seminar</a>
+given at
+<a href="http://www.ncar.ucar.edu/">NCAR</a> in June 2006.
+
+
+<p>The background of Parametric Fortran and its implementation
+is described in the following papers.
+
+<p><a href="../papers/abstracts.html#JSME07">
+Parametric Fortran: Program Generation in Scientific Computing</a>, 
+Martin Erwig, Zhe Fu and Ben Pflaum
+<br><i>Journal of Software Maintenance and Evolution, Vol. 19</i>,  
+No. 3, 155-182, 2007
+
+<p>
+<a href="../papers/abstracts.html#PEPM06">
+Generic Programming in Fortran</a>, 
+Martin Erwig, Zhe Fu and Ben Pflaum
+<br><i>ACM SIGPLAN 2006 Workshop on Partial Evaluation and Program Manipulation</i>, 
+130-139, 2006
+
+<p>
+<a href="../papers/abstracts.html#PADL04">Parametric Fortran
+ - A Program Generator for Customized Generic Fortran Extensions</a>, 
+Martin Erwig and Zhe Fu
+<br><i>6th Int. Symp. on Practical Aspects of Declarative Languages</i>,
+LNCS 3057, 209-223, 2004
+
+
+<h3>Contact Information</h3>
+
+<P>Please send questions, comments, and bug reports to 
+<a href="mailto:erwig@eecs.oregonstate.edu">Martin Erwig</a>.
+
+
+</body>
+
+<hr size=1 noshade>
+<table width=100% border=0 cellspacing=0>
+<tr>
+<td><font face=Candara,Helvetica,Arial size=2>
+last change:
+March 14, 2012
+</font></td>
+<td align=right><font face=Candara,Helvetica,Arial size=2><i>
+     <a href="http://eecs.oregonstate.edu/~erwig/">Martin Erwig</a>
+&nbsp<a href="mailto:erwig@eecs.oregonstate.edu">erwig@eecs.oregonstate.edu</a>
+    </i></font></td>
+</tr>
+</table>
+
+</html>

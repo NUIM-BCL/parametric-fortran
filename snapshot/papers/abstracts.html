@@ -1,0 +1,3495 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="KeyWords" content="Abstract, Summary, Functional Programming,
+Visual Languages, Spatial Databases, XML, End User">
+   <title>Publication-Abstracts by Martin Erwig</title>
+
+
+<link rel="stylesheet" type="text/css" href="../home.css" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28607288-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body text="#000000" bgcolor="#B5DEB5" link="#0000FF" vlink="#551A8B" alink="#0000FF">
+
+
+<h2>
+Abstracts </h2>
+
+<hr><a NAME="ICFP14"></a><h3>
+Type-Based Parametric Analysis of Program Families</h3>
+Sheng Chen and Martin Erwig.
+<i>ACM SIGPLAN Int. Conf. on Functional Programming</i>
+<a href="http://www.icfpconference.org/icfp2014/">(ICFP'14)</a>, 
+2014, to appear
+<p>
+Previous research on static analysis for program families has focused on
+lifting analyses for single, plain programs to program families by employing
+idiosyncratic representations. The lifting effort typically involves a
+significant amount of work for proving the correctness of the lifted algorithm
+and demonstrating its scalability.
+
+In this paper, we propose a parameterized static analysis framework for program
+families that can automatically lift a class of type-based static analyses for
+plain programs to program families. The framework consists of a
+parametric logical specification and a parametric variational constraint
+solver. We prove that a lifted algorithm is correct provided that
+the underlying analysis algorithm is correct.
+
+An evaluation of our framework has revealed an error in a previous
+"hand-lifted" analysis and indicates that the overhead incurred by the
+general framework is bounded by a factor of 2.
+<p>
+
+
+
+<hr><a NAME="Onward14"></a><h3>
+Variational Data Structures: Exploring Tradeoffs in Computing with Variability</h3>
+Eric Walkingshaw, Christian K&auml;stner, Martin Erwig, Sven Apel, and Eric Bodden.
+<i>ACM SIGPLAN Int. Symp.\ on New Ideas, New Paradigms, and 
+Reflections on Programming &amp; Software (Onward!)</i>
+<a href="http://2014.splashcon.org/track/onward2014-papers">(Onward'14)</a>, 
+2014, to appear
+<p>
+Variation is everywhere, but in the construction and analysis of customizable
+software it is paramount. In this context, there arises a need for
+<i>variational data structures</i> for efficiently representing and computing
+with related variants of an underlying data type.
+
+So far, variational data structures have been explored and developed ad hoc.
+This paper is a first attempt and a call to action for systematic and
+foundational research in this area. Research on variational data structures
+will benefit not only customizable software, but the many other application
+domains that must cope with variability.
+
+In this paper, we show how support for variation can be understood as a general
+and orthogonal property of data types, data structures, and algorithms. We
+begin a systematic exploration of basic variational data structures, exploring
+the tradeoffs between different implementations. Finally, we retrospectively
+analyze the design decisions in our own previous work where we have
+independently encountered problems requiring variational data structures.
+<p>
+
+
+
+<hr><a NAME="VLHCC14"></a><h3>
+Let's Hear Both Sides: On Combining Type-Error Reporting Tools</h3>
+Sheng Chen, Martin Erwig, and Karl Smeltzer
+<i>IEEE Int. Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="https://sites.google.com/site/vlhcc2014/">(VL/HCC'14)</a>, 
+2014, to appear
+<p>
+Producing precise and helpful type error messages has been a challenge for the
+implementations of functional programming languages for over 3 decades
+now. Many different approaches and methods have been tried to solve this
+thorny problem, but current type-error reporting tools still suffer from a
+lack of precision in many cases. Based on the rather obvious observation that
+different approaches work well in different situations, we have studied the
+question of whether a combination of tools that exploits their diversity can
+lead to improved accuracy. Specifically, we have studied Helium, a Haskell
+implementation particularly aimed at producing good type error messages, and
+Lazy Typing, an approach developed previously by us to address the premature
+error commitment problem in type checkers. By analyzing the respective
+strengths and weaknesses of the two approaches we were able to identify a
+strategy to combine both tools that could markedly improve the accuracy of
+reported errors. Specifically, we report an evaluation of 1069 unique
+ill-typed programs out of a total of 11256 Haskell programs that reveals that
+this combination strategy enjoys a correctness rate of 79%, which is an
+improvement of 22%/17% compared to using Lazy Typing/Helium alone. In
+addition to describing this particular case study, we will also report
+insights we gained into the combination of error-reporting tools in general.
+<p>
+
+
+
+<hr><a NAME="FLOPS14"></a><h3>
+Guided Type Debugging</h3>
+Sheng Chen and Martin Erwig.
+<i>Int. Symp. on Functional and Logic Programming</i>
+<a href="http://www.jaist.ac.jp/flops2014/">(FLOPS'14)</a>, 
+LNCS 8475, 35-51, 2014
+<p>
+
+We present guided type debugging as a new approach to quickly and reliably
+remove type errors from functional programs. The method works by generating
+type-change suggestions that satisfy type specifications that are elicited
+from programmers during the debugging process. A key innovation is the
+incorporation of target types into the type error debugging process.
+
+Whereas previous approaches have aimed exclusively at the removal of type
+errors and disregarded the resulting types, guided type debugging exploits
+user feedback about result types to achieve better type-change suggestions.
+Our method can also identify and remove errors in type annotations, which has
+been a problem for previous approaches. To efficiently implement our approach,
+we systematically generate all potential type changes and arrange them in a
+lattice structure that can be efficiently traversed when guided by target
+types that are provided by programmers.
+<p>
+<a href="GTD_FLOPS14.pdf">Paper.pdf</a> (142K)
+
+
+<hr><a NAME="POPL14"></a><h3>
+Counter-Factual Typing for Debugging Type Errors</h3>
+Sheng Chen and Martin Erwig.
+<i>ACM SIGPLAN-SIGACT Symp. on Principles of Programming Languages</i>
+<a href="http://popl.mpi-sws.org/2014/">(POPL'14)</a>, 
+583-594, 2014
+<p>
+Changing a program in response to a type error plays an important
+part in modern software development. However, the generation of good
+type error messages remains a problem for highly expressive type
+systems.
+Existing approaches often suffer from a lack of precision in locating errors
+and proposing remedies. Specifically, they either fail to locate the source of
+the type error consistently, or they report too many potential error
+locations. Moreover, the change suggestions offered are often incorrect. This
+makes the debugging process tedious and ineffective.
+
+We present an approach to the problem of type debugging that is based on
+generating and filtering a comprehensive set of type-change suggestions.
+Specifically, we generate <i>all</i> (program-structure-preserving) type
+changes that can possibly fix the type error. These suggestions will be ranked
+and presented to the programmer in an iterative fashion. In some cases we
+also produce suggestions to change the program.
+In most situations, this strategy delivers the correct change suggestions
+quickly, and at the same time never misses any rare suggestions.
+The computation of the potentially huge set of type-change suggestions is
+efficient since it is based on a variational type inference algorithm that
+type checks a program with variations only once, efficiently reusing type
+information for shared parts.
+
+We have evaluated our method and compared it with previous approaches. Based
+on a large set of examples drawn from the literature, we have found that our
+method outperforms other approaches and provides a viable alternative.
+<p>
+<!--
+<a href="CF-Typing_POPL14.pdf">Paper.pdf</a> (364K)
+-->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/ft_gateway.cfm?id=2535863&ftid=1424834&dwn=1&CFID=267170581&CFTOKEN=80511922">Paper.pdf</a>
+
+<hr><a NAME="PEPM14"></a><h3>
+Early Detection of Type Errors in C++ Templates</h3>
+Sheng Chen and Martin Erwig.
+<i>ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation</i>
+<a href="http://www.program-transformation.org/PEPM14">(PEPM'14)</a>, 
+133-144, 2014
+<p>
+Current C++ implementations typecheck templates in two phases:
+Before instantiation, those parts of the template are checked that do
+not depend on template parameters, while the checking of the remaining parts
+is delayed until template instantiation time when the template arguments
+become available. This approach is problematic because it causes two major
+usability problems. First, it prevents library developers to provide
+guarantees about the type correctness for modules involving templates. Second,
+it can lead, through the incorrect use of template functions, to inscrutable
+error messages. Moreover, errors are often reported far away from the source
+of the program fault.
+
+To address this problem, we have developed a type system for Garcia's
+type-reflective calculus that allows a more precise characterization of types
+and thus a better utilization of type information within template definitions.
+This type system allows the static detection of many type errors that could
+previously only be detected after template instantiation. The additional
+precision and earlier detection time is achieved through the use of so-called
+"choice types" and corresponding typing rules that support the static reasoning about
+underspecified template types. The main contribution of this paper is a
+guarantee of the type safety of C++ templates (general definitions with
+specializations) since we can show that well-typed templates only generate
+well-typed object programs.
+<p>
+<!--
+<a href="C++TemplateErrors_PEPM14.pdf">Paper.pdf</a> (321K)
+-->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/ft_gateway.cfm?id=2543731&ftid=1424821&dwn=1&CFID=267170581&CFTOKEN=80511922">Paper.pdf</a>
+
+<hr><a NAME="TOPLAS14"></a><h3>
+Extending Type Inference to Variational Programs</h3>
+Sheng Chen, Martin Erwig, and Eric Walkingshaw.
+<i><a href="http://toplas.acm.org/">
+ACM Transactions on Programming Languages and Systems</a>, Vol. 36</i>, 
+No. 1, 1:1--1:54, 2014
+<p>
+Through the use of conditional compilation and related tools, many software
+projects can be used to generate a huge number of related programs.
+The problem of typing such variational software is difficult.  The brute-force
+strategy of generating all variants and typing each one individually is (1)
+usually infeasible for efficiency reasons and (2) produces results that do not
+map well to the underlying variational program.
+Recent research has focused mainly on efficiency and addressed only the problem
+of type checking.  In this work we tackle the more general problem of
+variational type inference and introduce variational types to represent the
+result of typing a variational program.
+
+We introduce the variational lambda calculus (VLC) as a formal foundation for
+research on typing variational programs.  We define a type system for VLC in
+which VLC expressions are mapped to correspondingly variational types.
+We show that the type system is correct by proving that the typing of
+expressions is preserved over the process of variation elimination, which
+eventually results in a plain lambda calculus expression and its corresponding
+type.
+
+We identify a set of equivalence rules for variational types and prove that the
+type unification problem modulo these equivalence rules is unitary and
+decidable; we also present a sound and complete unification algorithm.
+Based on the unification algorithm, the variational type inference algorithm is
+an extension of algorithm W.  We show that it is sound and complete and
+computes principal types.  We also consider the extension of VLC with sum
+types, a necessary feature for supporting variational data types, and
+demonstrate that the previous theoretical results also hold under this
+extension.
+
+Finally, we characterize the complexity of variational type inference and
+demonstrate the efficiency gains over the brute-force strategy.
+<p>
+<a href="VLCTypeSystem_TOPLAS13.pdf">Paper.pdf</a> (341K)
+<!--
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?6737465">Paper.pdf</a>
+-->
+
+
+<hr><a NAME="FOSD13"></a><h3>
+An Abstract Representation of Variational Graphs</h3>
+Martin Erwig, Eric Walkingshaw, and Sheng Chen.
+<i>ACM Int. Workshop on Feature-Oriented Software Development</i>
+<a href="http://wwwiti.cs.uni-magdeburg.de/iti_db/workshops/FOSD13/">(FOSD'13)</a>, 
+25-32, 2013
+<p>
+In the context of software product lines, there is often a need to represent
+graphs containing variability.  For example, extending traditional modeling
+techniques or program analyses to variational software requires a corresponding
+notion of variational graphs.  
+
+In this paper, we introduce a general model of variational graphs and a
+theoretical framework for discussing variational graph algorithms.
+Specifically, we present an abstract syntax based on tagging for succinctly
+representing variational graphs and other data types relevant to variational
+graph algorithms, such as variational sets and paths.
+
+We demonstrate how (non-variational) graph algorithms can be generalized to
+operate on variational graphs, to accept variational inputs, and produce
+variational outputs.  Finally, we discuss a filtering operation on variational
+graphs and how this interacts with variational graph algorithms.
+<p>
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?6954221">Paper.pdf</a>
+
+
+<hr><a NAME="JVLC13"></a><h3>
+A Visual Language for Explaining Probabilistic Reasoning</h3>
+Martin Erwig and Eric Walkingshaw.
+<i><a href="http://dx.doi.org/10.1016/j.jvlc.2013.01.001">
+Journal of Visual Languages and Computing</a>, Vol. 24</i>,
+No. 2, 88-109, 2013
+<p>
+We present an explanation-oriented, domain-specific, visual language for
+explaining probabilistic reasoning.  Explanation-oriented programming is a new
+paradigm that shifts the focus of programming from the computation of results
+to explanations of how those results were computed.  Programs in this language
+therefore describe explanations of probabilistic reasoning problems.
+
+The language relies on a story-telling metaphor of explanation, where the
+reader is guided through a series of well-understood steps from some initial
+state to the final result.
+
+Programs can also be manipulated according to a set of laws to automatically
+generate equivalent explanations from one explanation instance.  This increases
+the explanatory value of the language by allowing readers to cheaply derive
+alternative explanations if they do not understand the first.
+
+The language is comprised of two parts: a formal textual notation for specifying
+explanation-producing programs and the more elaborate visual notation for
+presenting those explanations.  We formally define the abstract syntax of
+explanations and define the semantics of the textual notation in terms of the
+explanations that are produced.
+<p>
+<a href="VLforExplainingProbReasoning_JVLC13.pdf">Paper.pdf</a> (525K)
+
+
+
+<hr><a NAME="VAMOS13"></a><h3>
+Adding Configuration to the Choice Calculus</h3>
+Martin Erwig, Klaus Ostermann, Tillmann Rendel, and Eric Walkingshaw.
+<i>ACM Int. Workshop on Variability Modelling of Software-Intensive Systems</i>
+<a href="http://vamos2013.isti.cnr.it/">(VAMOS'13)</a>, 
+13:1-13:8, 2013
+<p>
+The choice calculus, a formal language for representing variation in software
+artifacts, features syntactic forms to map dimensions of variability
+to local choices between source code variants.
+However, the process of selecting alternatives from dimensions was relegated
+to an external operation.  The lack of a syntactic form for
+selection precludes many interesting variation and reuse
+patterns, such as nested product lines, and theoretical results,
+such as a syntactic description of the configuration process.
+
+In this paper we add a selection operation to the choice calculus and
+illustrate how that increases the expressiveness of the calculus.  We
+investigate some alternative semantics of this operation and study their
+impact and utility. Specifically, we will examine selection in the context of
+static and dynamically scoped dimension declarations, as a well as a linear
+and comprehensive form of dimension elimination. We also present a design for a type
+system to ensure configuration safety and modularity of nested product lines.
+<p>
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?6882103">Paper.pdf</a>
+
+
+<hr><a NAME="GTTSE13"></a><h3>
+Variation Programming with the Choice Calculus</h3>
+Martin Erwig and Eric Walkingshaw.
+<i>Generative and Transformational Techniques in Software Engineering</i>
+<a href="http://gttse.wikidot.com/">(GTTSE)</a>, 
+LNCS 7680, 55-100, 2013
+<p>
+The choice calculus provides a language for representing and transforming
+variation in software and other structured documents. Variability is captured
+in localized choices between alternatives. The space of all variations is
+organized by dimensions, which provide scoping and structure to choices. The
+variation space can be reduced through a process of selection, which
+eliminates a dimension and resolves all of its associated choices by replacing
+each with one of their alternatives. The choice calculus also allows the
+definition of arbitrary functions for the flexible construction and
+transformation of all kinds of variation structures. In this tutorial we will
+first present the motivation, general ideas, and principles that underlie the
+choice calculus. This is followed by a closer look at the semantics. 
+
+We will then present practical applications based on several small example
+scenarios and consider the concepts of "variation programming" and "variation
+querying". The practical applications involve work with a Haskell library that
+supports variation programming and experimentation with the choice calculus.
+<p> 
+<a href="VPwithCC_GTTSE12">Paper.pdf</a> (416K)
+
+
+<hr><a NAME="ICFP12"></a><h3>
+An Error-Tolerant Type System for Variational Lambda Calculus</h3>
+Sheng Chen, Martin Erwig, and Eric Walkingshaw.
+<i>ACM SIGPLAN Int. Conf. on Functional Programming</i>
+<a href="http://www.icfpconference.org/icfp2012/">(ICFP'12)</a>, 
+29-40, 2012
+<p>
+Conditional compilation and software product line technologies make it possible
+to generate a huge number of different programs from a single software project.
+Typing each of these programs individually is usually impossible due to the
+sheer number of possible variants.
+
+Our previous work has addressed this problem with a type system for variational
+lambda calculus (VLC), an extension of lambda calculus with basic constructs
+for introducing and organizing variation.  Although our type inference
+algorithm is more efficient than the brute-force strategy of inferring the
+types of each variant individually, it is less robust since type inference will
+fail for the entire variational expression if any one variant contains a type
+error.  In this work, we extend our type system to operate on VLC expressions
+containing type errors.  This extension directly supports locating ill-typed
+variants and the incremental development of variational programs.  It also has
+many subtle implications for the unification of variational types.  We show
+that our extended type system possesses a principal typing property and that
+the underlying unification problem is unitary.  Our unification algorithm
+computes partial unifiers that lead to result types that (1) contain errors in
+as few variants as possible and (2) are most general.
+
+Finally, we perform an empirical evaluation to determine the overhead of this
+extension compared to our previous work, to demonstrate the improvements over
+the brute-force approach, and to explore the effects of various error
+distributions on the inference process.
+<p>
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?6737465">Paper.pdf</a>
+
+
+<hr><a NAME="Haskell12"></a><h3>
+Surveyor: A DSEL for Representing and Analyzing Strongly Typed Surveys</h3>
+Wyatt Allen and Martin Erwig.
+<i>ACM SIGPLAN Haskell Symposium</i>
+<a href="http://www.haskell.org/haskell-symposium/2012/">(Haskell'12)</a>, 
+81-90, 2012
+<p>
+Polls and surveys are increasingly employed to gather information about
+attitudes and experiences of all kinds of populations and user groups. The
+ultimate purpose of a survey is to identify trends and relationships
+that can inform decision makers. To this end, the data gathered by a
+survey must be appropriately analyzed.
+
+Most of the currently existing tools focus on the user interface aspect of the
+data collection task, but pay little attention to the structure and type of
+the collected data, which are usually represented as potentially
+tag-annotated, but otherwise unstructured, plain text. This makes the task of
+writing data analysis programs often difficult and error-prone, whereas a
+typed data representation could support the writing of type-directed data
+analysis tools that would enjoy the many benefits of static typing.
+
+In this paper we present Surveyor, a DSEL that allows the compositional
+construction of typed surveys, where the types describe the structure of the
+data to be collected. A survey can be run to gather typed data, which can then
+be subjected to analysis tools that are built using Surveyor's typed
+combinators. Altogether the Surveyor DSEL realizes a strongly typed and
+type-directed approach to data gathering and analysis.
+
+The implementation of our DSEL is based on GADTs to allow a flexible, yet
+strongly typed representation of surveys. Moreover, the implementation employs
+the Scrap-Your-Boilerplate library to facilitate the type-dependent traversal,
+extraction, and combination of data gathered from surveys.
+<p>
+<a href="Surveyor_Haskell12.pdf">Paper.pdf</a> (462K)
+<!--
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?xx">Paper.pdf</a>
+-->
+
+
+
+<hr><a NAME="GPCE12a"></a><h3>
+A Calculus for Modeling and Implementing Variation</h3>
+Eric Walkingshaw and Martin Erwig.
+<i>ACM SIGPLAN Conf. on Generative Programming and Component Engineering</i>
+<a href="http://program-transformation.org/GPCE12/WebHome">(GPCE'12)</a>, 
+132-140, 2012
+<p>
+We present a formal calculus for modeling and implementing
+variation in software.  It unifies the compositional and annotative approaches
+to feature implementation and supports the development of abstractions that can
+be used to directly relate feature models to their implementation.
+
+Since the compositional and annotative approaches are complementary,
+the calculus enables implementers to use the best combination of tools
+for the job and focus on inherent feature interactions, rather than those
+introduced by biases in the representation. The calculus also supports the
+abstraction of recurring variational patterns and provides a metaprogramming
+platform for organizing variation in artifacts.
+<p>
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?6745442">Paper.pdf</a>
+
+
+
+<hr><a NAME="GPCE12b"></a><h3>
+Faster Program Adaptation Through Reward Attribution Inference</h3>
+Tim Bauer, Martin Erwig, Alan Fern, and Jervis Pinto.
+<i>ACM SIGPLAN Conf. on Generative Programming and Component Engineering</i>
+<a href="http://program-transformation.org/GPCE12/WebHome">(GPCE'12)</a>, 
+103-111, 2012
+<p>
+In the adaptation-based programming (ABP) paradigm, programs may contain
+variable parts (function calls, parameter values, etc.) that can be
+take a number of different values. Programs also contain reward
+statements with which a programmer can provide feedback about how well a
+program is performing with respect to achieving its goals (for example,
+achieving a high score on some scale).
+By repeatedly running the program, a machine learning component will, guided
+by the rewards, gradually adjust the automatic choices made in the
+variable program parts so that they converge toward an optimal strategy.
+
+ABP is a method for semi-automatic program generation in which the choices and
+rewards offered by programmers allow standard machine-learning techniques to
+explore a design space defined by the programmer to find an optimal instance
+of a program template.
+ABP effectively provides a DSL that allows non-machine learning experts to
+exploit machine learning to generate self-optimizing programs.
+
+Unfortunately, in many cases the placement and structuring of choices and
+rewards can have a detrimental effect on how an optimal solution to a
+program-generation problem can be found. 
+To address this problem, we have developed a dataflow analysis that computes
+influence tracks of choices and rewards. This information can be exploited by
+an augmented machine-learning technique to ignore misleading rewards and to
+generally attribute rewards better to the choices that have actually
+influenced them.
+Moreover, this technique allows us to detect errors in the adaptive program
+that might arise out of program maintenance.
+Our evaluation shows that the dataflow analysis can lead to improvements
+in performance. 
+<p>
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?6745449">Paper.pdf</a>
+
+
+<hr><a NAME="DSLbook12"></a><h3>
+Semantics-Driven DSL Design</h3> 
+Martin Erwig and Eric Walkingshaw.
+<i><a href="http://www.igi-global.com/book/formal-practical-aspects-domain-specific/66388">
+Formal and Practical Aspects of Domain-Specific Languages: Recent Developments</a></i>, 
+(ed. M. Mernik),
+56-80, 2012
+<p>
+Convention dictates that the design of a language begins with its syntax. We
+argue that early emphasis should be placed instead on the identification of
+general, compositional semantic domains, and that grounding the design process
+in semantics leads to languages with more consistent and more extensible
+syntax.  We demonstrate this semantics-driven design process through the
+design and implementation of a DSL for defining and manipulating calendars,
+using Haskell as a metalanguage to support this discussion. We emphasize the
+importance of compositionality in semantics-driven language design, and
+describe a set of language operators that support an incremental and modular
+design process.
+<p>
+<a href="SemanticDSLDesign-12.pdf">Paper.pdf</a> (978K)
+
+
+<hr><a NAME="ISSRE12"></a><h3>
+Lightweight Automated Testing with Adaptation-Based Programming</h3>
+Alex Groce, Alan Fern, Jervis Pinto, Tim Bauer, Amin Alipour, 
+Martin Erwig, and Camden Lopez.
+<i>IEEE Int. Symp. on Software Reliability Engineering</i>
+<a href="http://2012.issre.net/">(ISSRE'12)</a>, 
+2012
+<p>
+This paper considers the problem of testing a container class or other
+modestly-complex API-based software system. Past experimental evaluations
+have shown that for many such modules, random testing and shape abstraction
+based model checking are effective. These approaches have proven attractive
+due to a combination of minimal require- ments for tool/language support,
+extremely high usability, and low overhead. These "lightweight" methods are
+therefore available for almost any programming language or environment, in
+contrast to model checkers and concolic testers. Unfortunately, for the cases
+where random testing and shape abstraction perform poorly, there have been
+few alternatives available with such wide applicability. This paper presents
+a generalizable approach based on reinforcement learning (RL), using
+adaptation-based programming (ABP) as an interface to make RL-based testing
+(almost) as easy to apply and adaptable to new languages and environments as
+random testing. We show that learned tests differ from random ones, and
+propose a model for why RL works in this unusual (by RL standards) setting,
+in the context of a detailed large-scale experimental evaluation of
+lightweight automated testing methods.
+<p> 
+<a href="LightweightAutomatedTesting_ISSRE12.pdf">Paper.pdf</a> (170K)
+
+
+<hr><a NAME="ISOLA12"></a><h3>
+Learning-Based Test Programming for Programmers</h3>
+Alex Groce, Alan Fern, Martin Erwig, Jervis Pinto, 
+Tim Bauer, and Amin Alipour.
+<i>Int. Symp. on Leveraging Applications of Formal Methods,
+   Verification, and Validation</i>
+<a href="http://www.cs.uni-potsdam.de/isola/isola2012/">(ISOLA'12)</a>, 
+LNCS 7609, 582-586, 2012
+<p>
+While a diverse array of approaches to applying machine learning to testing
+has appeared in recent years, many efforts share three central challenges, two
+of which are not always obvious. First, learning-based testing relies on
+adapting the tests generated to the program being tested, based on the results
+of observed executions. This is the heart of a machine learning approach to
+test generation. A less obvious challenge in many approaches is that the
+learning techniques used may have been devised for problems that do not share
+all the assumptions and goals of software testing. Finally, the usability of
+approaches by programmers is a challenge that has often been neglected.
+Programmers may wish to maintain more control of test generation than a "push
+button" tool generally provides, without becoming experts in software testing
+theory or machine learning algorithms, and with access to the full power of
+the language in which the tested system is written. In this paper we consider
+these issues, in light of our experience with adaptation-based programming as
+a method for automated test generation.
+<p> 
+<a href="TestProgramming_ISOLA12.pdf">Paper.pdf</a> (152K)
+
+
+<hr><a NAME="JVLC12"></a><h3>
+Systematic Evolution of Model-Based Spreadsheet Applications</h3>
+Markus Luckey, Martin Erwig, and Gregor Engels.
+<i><a href="http://store.elsevier.com/product.jsp?isbn=1045926X">
+Journal of Visual Languages and Computing</a>, Vol. 23</i>,
+No. 5, 267-286, 2012
+<p>
+Using spreadsheets is the preferred method to calculate, display or store
+anything that fits into a table-like structure. They are often used by end
+users to create applications, although they have one critical
+drawback - spreadsheets are very error-prone. Recent research has developed
+methods to reduce this error-proneness by introducing a new way of
+object-oriented modeling of spreadsheets before using them. These spreadsheet
+models, termed ClassSheets, are used to generate concrete spreadsheets on the
+instance level. By this approach sources of errors are reduced and spreadsheet
+applications become easier to understand. As usual for almost every other
+application, requirements on spreadsheets change due to the changing
+environment. Thus, the problem of evolution of spreadsheets arises. The update
+and evolution of spreadsheets is the uttermost source of errors that may have
+severe impact. In this article, we will introduce a model-based approach to
+spreadsheet evolution by propagating updates on spreadsheet models (i.e.
+ClassSheets) to spreadsheets. To this end, update commands for the ClassSheet
+layer are automatically transformed to those for the spreadsheet layer. We
+describe spreadsheet model update propagation using a formal framework and
+present an integrated tool suite that allows the easy creation and safe update
+of spreadsheet models. The presented approach greatly contributes to the
+problem of software evolution and maintenance for spreadsheets and thus avoids
+many errors that might have severe impacts.
+<p>
+<a href="ClassSheetEvol_JVLC12.pdf">Paper.pdf</a> (1.5M)
+
+
+<hr><a NAME="WODA12"></a><h3>
+Finding Common Ground: Choose, Assert, and Assume</h3>
+Alex Groce and Martin Erwig.
+<i>Int. Workshop on Dynamic Analysis</i>
+<a href="http://woda2012.ec-spride.de/">(WODA'12)</a>, 
+12-17, 2012
+<p>
+At present, the "testing community" is on good speaking terms, but typically
+lacks a common language for expressing some computational ideas, even in cases
+where such a language would be both useful and plausible. In particular, a
+large body of testing systems define a testing problem in the language of the
+system under test, extended with operations for choosing inputs, asserting
+properties, and constraining the domain of executions considered. While the
+underlying algorithms used for "testing" include symbolic execution,
+explicit-state model checking, machine learning, and "old fashioned" random
+testing, there seems to be a common core of expressive need. We propose that
+the dynamic analysis community could benefit from working with some common
+syntactic (and to some extent semantic) mechanisms for expressing a body of
+testing problems. Such a shared language would have immediate practical uses
+and make cross-tool comparisons and research into identifying appropriate
+tools for different testing activities easier. We also suspect that
+considering the more abstract testing problem arising from this minimalist
+common ground could serve as a basis for thinking about the design of usable
+embedded domain-specific languages for testing and might help identify
+computational patterns that have escaped the notice of the community.
+<p> 
+<!-- <a href="ChooseAssertAssume_WODA12.pdf">Paper.pdf</a> (160K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?6719976">Paper.pdf</a>
+
+
+<hr><a NAME="FASE12"></a><h3>
+Explanations for Regular Expressions</h3>
+Martin Erwig and Rahul Gopinath.
+<i>Int. Conf. on Fundamental Approaches to Software Engineering</i>
+<a href="http://www.etaps.org/2012/fase">(FASE'12)</a>, 
+LNCS 7212, 394-408, 2012
+<p>
+Regular expressions are widely used, but they are inherently hard to
+understand and (re)use, which is primarily due to the lack of abstraction
+mechanisms that causes regular expressions to grow large very quickly. The
+problems with understandability and usability are further compounded by the
+viscosity, redundancy, and terseness of the notation. As a consequence, many
+different regular expressions for the same problem are floating around, many
+of them erroneous, making it quite difficult to find and use the right regular
+expression for a particular problem. Due to the ubiquitous use of regular
+expressions, the lack of understandability and usability becomes a serious
+software engineering problem.
+
+In this paper we present a range of independent, complementary representations
+that can serve as explanations of regular expressions. We provide methods to
+compute those representations, and we describe how these methods and the
+constructed explanations can be employed in a variety of usage scenarios. In
+addition to aiding understanding, some of the representations can also help
+identify faults in regular expressions. Our evaluation shows that our methods
+are widely applicable and can thus have a significant impact in improving
+the practice of software engineering.  
+<p> 
+<a href="ExplRegExp_FASE12.pdf">Paper.pdf</a> (598K) 
+
+
+<hr><a NAME="TOSEM11"></a><h3>
+The Choice Calculus: A Representation for Software Variation</h3>
+Martin Erwig and Eric Walkingshaw.
+<i><a href="http://tosem.acm.org/">
+ACM Transactions on Software Engineering and Methodology</a>, Vol. 21</i>, 
+No. 1, 6:1-6:27, 2011
+<p>
+Many areas of computer science are concerned with some form of variation in
+software - from managing changes to software over time, to supporting families
+of related artifacts.  
+We present the choice calculus, a fundamental
+representation for software variation that can serve as a common language of
+discourse for variation research, filling a role similar to the lambda calculus
+in programming language research.  We also develop an associated theory of
+software variation, including sound transformations of variation artifacts, the
+definition of strategic normal forms, and a design theory for variation
+structures, which will support the development of better algorithms and tools.
+<p>
+<!-- <a href="ChoiceCalculus_TOSEM11.pdf">Paper.pdf</a> (324K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?6514403">Paper.pdf</a>
+
+
+<hr><a NAME="SLE11"></a><h3>
+Semantics First! Rethinking the Language Design Process</h3>
+Martin Erwig and Eric Walkingshaw.
+<i>Int. Conf. on Software Language Engineering</i>
+<a href="http://planet-sl.org/sle2011/">(SLE'11)</a>, 
+LNCS 6940, 243-262, 2011
+<p>
+The design of languages is still more of an art than an engineering
+discipline. Although recently tools have been put forward to support the
+language design process, such as language workbenches, these have mostly
+focused on a syntactic view of languages. While these tools are quite helpful
+for the development of parsers and editors, they provide little support for
+the underlying design of the languages.
+
+In this paper we illustrate how to support the design of languages by focusing
+on their semantics first. Specifically, we will show that powerful and general
+language operators can be employed to adapt and grow sophisticated languages
+out of simple semantics concepts.
+We use Haskell as a metalanguage and will associate generic language concepts,
+such as semantics domains, with Haskell-specific ones, such as data types.  We
+do this in a way that clearly distinguishes our approach to language design
+from the traditional syntax-oriented one.
+This will reveal some unexpected correlations, such as viewing type classes as
+language multipliers.
+We illustrate the viability of our approach with several real-world examples.
+<p>  
+<a href="SemanticsFirst_SLE11.pdf">Paper.pdf</a> (176K) 
+
+
+<hr><a NAME="DSL11a"></a><h3>
+A DSEL for Studying and Explaining Causation</h3>
+Eric Walkingshaw and Martin Erwig.
+<i>IFIP Working Conference on Domain Specific Languages</i>
+<a href="https://dsl2011.bordeaux.inria.fr/">(DSL'11)</a>, 
+143-167, 2011
+<p>
+We present a domain-specific embedded language (DSEL) in Haskell that supports
+the philosophical study and practical explanation of causation. The language
+provides constructs for modeling situations comprised of events and functions
+for reliably determining the complex causal relation- ships that emerge
+between these events. It enables the creation of visual explanations of these
+causal relationships and a means to systematically generate alternative,
+related scenarios, along with corresponding outcomes and causes. The DSEL is
+based on neuron diagrams, a visual notation that is well established in
+practice and has been successfully employed for causation explanation and
+research. In addition to its immediate applicability by users of neuron
+diagrams, the DSEL is extensible, allowing causation experts to extend the
+notation to introduce special-purpose causation constructs. The DSEL also
+extends the notation of neuron diagrams to operate over non-boolean values,
+improving its expressiveness and offering new possibilities for causation
+research and its applications.
+<p> 
+<a href="CausationDSEL_DSL11.pdf">Paper.pdf</a> (430K)
+
+
+<hr><a NAME="DSL11b"></a><h3>
+Adaptation-Based Programming in Haskell</h3>
+Tim Bauer, Martin Erwig, Alan Fern, and Jervis Pinto.
+<i>IFIP Working Conference on Domain Specific Languages</i>
+<a href="https://dsl2011.bordeaux.inria.fr/">(DSL'11)</a>, 
+1-23, 2011
+<p>
+We present an embedded DSL to support adaptation-based programming (ABP)
+in Haskell. ABP is an abstract model for defining adaptive values,
+which adapt in response to some associated feedback.
+We show how our design choices in Haskell motivate higher-level combinators
+and constructs and help us derive more complicated compositional adaptives.
+
+We also show an important specialization of ABP is in support of
+reinforcement learning constructs, which optimize adaptive values based 
+on a programmer-specified objective function. This permits ABP users to easily
+define adaptive values that express uncertainty anywhere in their programs.
+Over repeated executions, these adaptive values adjust to more optimal ones
+allow the user's programs to self optimize.
+
+The design of our DSL depends significantly on the use of type classes. 
+We will illustrate, along with presenting our DSL, how the use of type 
+classes can support the gradual evolution of DSLs.
+<p> 
+<a href="ABPinHaskell_DSL11.pdf">Paper.pdf</a> (164K)
+
+
+<hr><a NAME="ACML11"></a><h3>
+Improving Policy Gradient Estimates with Influence Information</h3>
+Jervis Pinto, Alan Fern, Tim Bauer, and Martin Erwig.
+<i>Asian Conference on Machine Learning and Applications</i>, 
+1-16, 2011
+<p>
+In reinforcement learning (RL) it is often possible to obtain sound, but
+incomplete, information about influences and independencies among problem
+variables and rewards, even when an exact domain model is unknown. For
+example, such information can be computed based on a partial, qualitative
+domain model, or via domain-specific analysis techniques. While, intuitively,
+such information appears useful for RL, there are no algorithms that
+incorporate it in a sound way. In this work, we describe how to leverage such
+information for improving the estimation of policy gradients, which can be
+used to speedup gradient-based RL. We prove general conditions under which our
+estimator is unbiased and show that it will typically have reduced variance
+compared to standard unbiased gradient estimates. We evaluate the approach in
+the domain of Adaptation-Based Programming where RL is used to optimize the
+performance of programs and independence information can be computed via
+standard program analysis techniques. Incorporating independence information
+produces a large speedup in learning on a variety of adaptive programs.
+<p>
+<a href="PolicyGradientEstimates_ACML11.pdf">Paper.pdf</a> (1.2M)
+
+
+<hr><a NAME="VLHCC11"></a><h3>
+&#35ifdef Confirmed Harmful: Promoting Understandable Software Variation</h3>
+Duc Le, Eric Walkingshaw, and Martin Erwig.
+<i>IEEE Int. Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://www.cs.cmu.edu/~vlhcc2011/">(VL/HCC'11)</a>, 
+143-150, 2011
+<p>
+Maintaining variation in software is a difficult problem that poses serious
+challenges for the understanding and editing of software artifacts.
+
+Although the C preprocessor (CPP) is often the default tool used to introduce
+variability to software, because of its simplicity and flexibility, it is
+infamous for its obtrusive syntax and has been blamed for reducing the
+comprehensibility and maintainability of software.  
+
+In this paper, we address this problem by developing a prototype for managing
+software variation at the source code level.  We evaluate the difference
+between our prototype and CPP with a user study, which indicates that the prototype
+helps users reason about variational code faster and more accurately than CPP.
+Our results also support the research of others, providing evidence for the
+effectiveness of related tools, such as CIDE and FeatureCommander.
+<p>
+<a href="CPPUserStudy_VLHCC11.pdf">Paper.pdf</a> (726K)
+
+
+<hr><a NAME="SPLC11"></a><h3>
+Optimizing the Product Derivation Process</h3>
+Sheng Chen and Martin Erwig.
+<i>IEEE Int. Software Product Line Conference</i>
+<a href="http://www.splc2011.net/">(SPLC'11)</a>,
+35-44, 2011
+<p>
+Feature modeling is widely used in software product-line engineering to
+capture the commonalities and variabilities within an application domain. As
+feature models evolve, they can become very complex with respect to the number
+of features and the dependencies among them, which can cause the product
+derivation based on feature selection to become quite time consuming and error
+prone.
+
+We address this problem by presenting techniques to find good feature
+selection sequences that are based on the number of products that contain a
+particular feature and the impact of a selected feature on the selection of
+other features.  Specifically, we identify a feature selection strategy, which
+brings up highly selective features early for selection. By prioritizing
+feature selection based on the selectivity of features our technique makes the
+feature selection process more efficient.  Moreover, our approach helps with
+the problem of unexpected side effects of feature selection in later stages of
+the selection process, which is commonly considered a difficult problem. Our
+evaluation results demonstrate that with the help of our techniques the
+feature selection processes can be reduced significantly.
+<p>
+  <a href="ProductDerivation_SPLC11.pdf">Paper.pdf</a> (319K)
+
+
+<hr><a NAME="PEPM11"></a><h3>
+Adaptation-Based Programming in Java</h3>
+Tim Bauer, Martin Erwig, Alan Fern, and Jervis Pinto.
+<i>ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation</i>
+<a href="http://www.program-transformation.org/PEPM11">(PEPM'11)</a>, 
+81-90, 2011
+<p>
+Writing deterministic programs is often difficult for problems whose optimal
+solutions depend on unpredictable properties of the programs' inputs.
+Difficulty is also encountered for problems where the programmer is uncertain
+about how to best implement certain aspects of a solution. For such problems a
+mixed strategy of deterministic programming and machine learning can often be
+very helpful: Initially, define those parts of the program that are well
+understood and leave the other parts loosely defined through default actions,
+but also define how those actions can be improved depending on results from
+actual program runs. Then run the program repeatedly and let the loosely
+defined parts adapt.
+
+In this paper we present a library for Java that facilitates this style of
+programming, called \emph{adaptation-based programming}. We motivate the
+design of the library, define the semantics of adaptation-based programming,
+and demonstrate through two evaluations that the approach works well in
+practice.
+Adaptation-based programming is a form of program generation in which the
+creation of programs is controlled by previous runs. It facilitates a whole
+new spectrum of programs between the two extremes of totally deterministic
+programs and machine learning.
+<!-- <p><a href="ABPJava_PEPM11.pdf">Paper.pdf</a> (209K) -->
+<p>
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?478691">Paper.pdf</a>
+
+
+<hr><a NAME="ACMCS11"></a><h3>
+The State of the Art in End-User Software Engineering</h3>
+A. J. Ko, R. Abraham, L. Beckwith, A. Blackwell, M. M.
+Burnett, M. Erwig, J. Lawrence, C. Scaffidi, H. Lieberman, B. Myers, M. B.
+Rosson, G. Rothermel, M. Shaw, and S. Wiedenbeck.
+<i>ACM Computing Surveys, Vol. 43</i>, No. 3, 2011
+<p>
+Most programs today are written not by professional software developers, but
+by people with expertise in other domains working towards goals for which they
+need computational support. For example, a teacher might write a grading
+spreadsheet to save time grading, or an interaction designer might use an
+interface builder to test some user interface design ideas. Although these
+end-user programmers may not have the same goals as professional developers,
+they do face many of the same software engineering challenges, including
+understanding their re- quirements, as well as making decisions about design,
+reuse, integration, testing, and debugging. This article summarizes and
+classifies research on these activities, defining the area of End-User
+Software Engineering (EUSE) and related terminology. The article then
+discusses empirical research about end-user software engi- neering activities
+and the technologies designed to support them. The article also addresses
+several crosscutting issues in the design of EUSE tools, including the roles
+of risk, reward, and domain complexity, and self-efficacy in the design of
+EUSE tools and the potential of educating users about software engineering
+principles.
+<p>
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?471050">Paper.pdf</a>
+
+
+<hr><a NAME="FOSER10"></a><h3>
+Program Fields for Continuous Software</h3>
+Martin Erwig and Eric Walkingshaw.
+<i>ACM SIGSOFT Workshop on the Future of Software Engineering Research</i>, 
+105-108, 2010
+<p>
+We propose <i>program fields</i>, a formal representation for
+groups of related programs, as a new abstraction to support future software
+engineering research in several areas. We will discuss opportunities offered by
+program fields and research questions that have to be addressed.
+<p>
+<!-- <a href="ProgramFields_FOSER10.pdf">Paper.pdf</a> (250K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?318955">Paper.pdf</a>
+
+
+<hr><a NAME="ICMLA10"></a><h3>
+Robust Learning for Adaptive Programs by Leveraging Program Structure</h3>
+Jervis Pinto, Alan Fern, Tim Bauer, and Martin Erwig.
+<i>IEEE Int. Conf. on Machine Learning and Applications</i>, 
+943-948, 2010
+<p>
+We study how to effectively integrate reinforcement learning
+(RL) and programming languages via adaptation-based programming,
+where programs can include non-deterministic structures that can
+be automatically opti- mized via RL. Prior work has optimized
+adaptive programs by defining an induced sequential decision
+process to which standard RL is applied. Here we show that the
+success of this approach is highly sensitive to the specific
+program structure, where even seemingly minor program
+transformations can lead to failure. This sensitivity makes it
+extremely difficult for a non-RL-expert to write effective
+adaptive programs. In this paper, we study a more robust learning
+approach, where the key idea is to leverage information about
+program structure in order to define a more informative decision
+process and to improve the SARSA(lambda) RL algorithm. Our empirical
+results show significant benefits for this approach.
+<p>
+<a href="ABPStructure_ICMLA10.pdf">Paper.pdf</a> (401K)
+
+
+
+<hr><a NAME="GPCE10"></a><h3>
+A Language for Software Variation Research</h3>
+Martin Erwig.
+<i>ACM SIGPLAN Conf. on Generative Programming and Component Engineering</i>, 
+3-12, 2010
+<p>
+Managing variation is an important problem in software engineering that
+takes different forms, ranging from version control and configuration
+management to software product lines. In this paper, I present our recent 
+work on the choice
+calculus, a fundamental representation for software variation that can serve
+as a common language of discourse for variation research, filling a role
+similar to lambda calculus in programming language research.
+After motivating the design of the choice calculus and sketching its
+semantics, I will discuss several potential application areas.
+<p>
+<!-- <a href="VariationLang_GPCE10.pdf">Paper.pdf</a> (266K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?379682">Paper.pdf</a>
+
+
+<hr><a NAME="JVLC10"></a><h3>
+Reasoning about Spreadsheets with Labels and Dimensions</h3>
+Chris Chambers and Martin Erwig.
+<i><a href="http://store.elsevier.com/product.jsp?isbn=1045926X">
+Journal of Visual Languages and Computing</a>, Vol. 21</i>,
+No. 5, 249-262, 2010
+<p>
+Labels in spreadsheets can be exploited for finding formula errors in two
+principally different ways.
+First, the spatial relationships between labels and other cells express
+simple constraints on the cells usage in formulas.
+Second, labels can be interpreted as units of measurements to provide semantic
+information about the data being combined in formulas, which results in
+different kinds of constraints.
+
+In this paper we demonstrate how both approaches can be combined into an
+integrated analysis, which is able to find significantly more errors in
+spreadsheets than each of the individual approaches. In particular, the
+integrated system is able to detect errors that cannot be found by either
+of the individual approaches alone, which shows that the integrated system
+provides an added value beyond the mere combination of its parts.
+We also compare the effectiveness of this combined approach with
+several other conceivable combinations of the involved components and identify
+a system that seems most effective to find spreadsheet formula errors based on
+label and unit-of-measurement information.
+<p>
+<a href="LabelsAndDims-JVLC10.pdf">Paper.pdf</a> (2.1M)
+
+
+<hr><a NAME="VLHCC10a"></a><h3>
+Causal Reasoning with Neuron Diagrams</h3>
+Martin Erwig and Eric Walkingshaw.
+<i>IEEE Int. Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://www.dei.inf.uc3m.es/vlhcc10/">(VL/HCC'10)</a>, 
+101-108, 2010
+<p>
+The principle of causation is fundamental to science and society and has
+remained an active topic of discourse in philosophy for over two millennia.
+Modern philosophers often rely on "neuron diagrams", a domain-specific visual
+language for discussing and reasoning about causal relationships and the
+concept of causation itself.  In this paper we formalize the syntax and
+semantics of neuron diagrams.  We discuss existing algorithms for identifying
+causes in neuron diagrams, show how these approaches are flawed, and propose
+solutions to these problems.  We separate the standard representation of a
+dynamic execution of a neuron diagram from its static definition and define two
+separate, but related semantics, one for the causal effects of neuron diagrams
+and one for the identification of causes themselves.  Most significantly, we
+propose a simple language extension that supports a clear, consistent, and
+comprehensive algorithm for automatic causal inference.
+<p>
+<a href="NeuronDiagrams_VLHCC10.pdf">Paper.pdf</a> (217K)
+
+
+<hr><a NAME="VLHCC10b"></a><h3>
+SheetDiff: A Tool for Identifying Changes in Spreadsheets</h3>
+Chris Chambers, Martin Erwig, and Markus Luckey
+<i>IEEE Int. Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://www.dei.inf.uc3m.es/vlhcc10/">(VL/HCC'10)</a>, 
+85-92, 2010
+<p>
+Most spreadsheets, like other software, change over time. A frequently
+occurring scenario is the repeated reuse and adaptation of spreadsheets from
+one project to another. If several versions of one spreadsheet for
+grading/budgeting/etc. have accumulated, it is often not obvious which one to
+choose for the next project. In situations like these, an understanding of how
+two versions of a spreadsheet differ is crucial to make an
+informed choice. Other scenarios are the reconciliation of two spreadsheets
+created by different users, generalizing different spreadsheets into a common
+template, or simply understanding and documenting the evolution of a
+spreadsheet over time.
+
+In this paper we present a method for identifying the changes between two
+spreadsheets with the explicit goal of presenting them to users in a concise
+form. We have implemented a prototype system, called SheetDiff, and tested
+the approach on several different spreadsheet pairs. As our evaluations will
+show, this system works reliably in practice. Moreover, we have compared
+SheetDiff to similar systems that are commercially available. An important
+difference is that while all these other tools distribute the change
+representation over two spreadsheets, our system displays all changes in the
+context of one spreadsheet, which results in a more compact representation.
+<p>
+<a href="SheetDiff_VLHCC10.pdf">Paper.pdf</a> (934K)
+
+
+<hr><a NAME="VLHCC10c"></a><h3>
+Automatically Inferring ClassSheet Models from Spreadsheets</h3>
+Jacome Cunha, Martin Erwig,  and Joao Saraiva.
+<i>IEEE Int. Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://www.dei.inf.uc3m.es/vlhcc10/">(VL/HCC'10)</a>, 
+93-100, 2010
+<p>
+Many errors in spreadsheet formulas can be avoided if spreadsheets are built
+automatically from higher-level models that can encode and enforce consistency
+constraints. However, designing such models is time consuming and requires
+expertise beyond the knowledge to work with spreadsheets. Legacy spreadsheets
+pose a particular challenge to the approach of controlling spreadsheet
+evolution through higher-level models, because the need for a model might be
+overshadowed by two problems: (A) The benefit of creating a spreadsheet is
+lacking since the legacy spreadsheet already exists, and (B) existing data
+must be transferred into the new model-generated spreadsheet.
+
+To address these problems and to support the model-driven spreadsheet
+engineering approach, we have developed a tool that can automatically infer
+ClassSheet models from spreadsheets. To this end, we have adapted a method to
+infer entity/relationship models from relational database to the
+spreadsheets/ClassSheets realm. We have implemented our techniques in the
+HaExcel framework and integrated it with the ViTSL/Gencel spreadsheet
+generator, which allows the automatic generation of refactored spreadsheets
+from the inferred ClassSheet model. The resulting spreadsheet guides further
+changes and provably safeguards the spreadsheet against a large class of
+formula errors. The developed tool is a significant contribution to
+spreadsheet (reverse) engineering, because it fills an important gap and
+allows a promising design method (ClassSheets) to be applied to a huge
+collection of legacy spreadsheets with minimal effort.
+<p>
+<a href="InferCS_VLHCC10.pdf">Paper.pdf</a> (774K)
+
+
+<hr><a NAME="SLE09"></a><h3>
+Declarative Scripting in Haskell</h3> 
+Tim Bauer and Martin Erwig.
+<i>Int. Conf. on Software Language Engineering</i>
+<a href="http://planet-sl.org/sle-conference/index.php?option=com_content&task=view&id=109&Itemid=192">(SLE'09)</a>,
+LNCS 5969, 294-313, 2009
+<p>
+We present a domain-specific language embedded within the Haskell programming
+language to build scripts in a declarative and type-safe manner. We can
+categorize script components into various orthogonal dimensions, or
+concerns, such as IO interaction, configuration, or error handling. In
+particular, we provide special support for two dimensions that are often
+neglected in scripting languages, namely creating deadlines for computations
+and tagging and tracing of computations. Arbitrary computations may be
+annotated with a textual tag explaining its purpose. Upon failure a detailed
+context for that error is automatically produced. The deadline combinator
+allows one to set a timeout on an operation. If it fails to complete within
+that amount of time, the computation is aborted. Moreover, this combinator
+works with the tag combinator so as to produce a contextual trace.
+<p>
+<a href="DeclScripting_SLE09.pdf">Paper.pdf</a> (164K)
+
+
+<hr><a NAME="JFP09"></a><h3>
+A Domain-Specific Language for Experimental Game Theory</h3>
+Eric Walkingshaw and Martin Erwig. 
+<i><a href="http://www.cambridge.org/jfp">
+Journal of Functional Programming</a> Vol. 19</i>, 
+No. 6, 645-661, 2009
+<p>
+Experimental game theory refers to the use of game theoretic models in
+simulations and experiments to understand strategic behavior.  It is an
+increasingly important research tool in many fields, including economics,
+biology and many social sciences, but computer support
+for such projects is primarily found in custom programs written in general
+purpose languages.  
+<p>
+Here we present Hagl (short for "Haskell game language", and loosely
+intended to evoke the homophone "haggle"), a domain-specific language
+embedded in Haskell, intended to drastically reduce the development time of
+such experiments, and make the definition and exploration of games and
+strategies simple and fun.
+<p><a href="Hagl_JFP09.pdf">Paper.pdf</a> (135K)
+
+
+<hr><a NAME="Software09"></a><h3>
+Software Engineering for Spreadsheets</h3> 
+Martin Erwig. 
+<i><a href="http:/computer.org/software">
+IEEE Software</a> Vol. 29</i>,
+No. 5, 25-30, 2009
+<p>
+Spreadsheets are popular end-user programming tools. Many people
+use spreadsheet-computed values to make critical decisions, so
+spreadsheets must be correct. Proven software engineering
+principles can assist the construction and maintenance of
+dependable spreadsheets. However, how can we make this practical
+for end users? One way is to exploit spreadsheets' idiosyncratic
+structure to translate software engineering concepts such as type
+checking and debugging to an end-user programming domain. The
+simplified computational model and the spatial embedding of
+formulas, which provides rich contextual information, can
+simplify these concepts, leading to effective tools for end
+users.
+<p>
+<a href="SEforSpreadsheets_IEEESoftware09.pdf">Paper.pdf</a> (315K)
+
+
+<hr><a NAME="JVLC09"></a><h3>
+Automatic Detection of Dimension Errors in Spreadsheets</h3> 
+Chris Chambers and Martin Erwig. 
+<i><a href="http://store.elsevier.com/product.jsp?isbn=1045926X">
+Journal of Visual Languages and Computing</a> Vol. 20</i>, 
+No. 4, 269-283,  2009
+<p>
+Spreadsheets are widely used, and studies have shown that most
+end-user spreadsheets contain non-trivial errors. Most of the
+currently available tools that try to mitigate this problem require 
+varying levels of user intervention. This paper presents a
+system, called UCheck, that detects errors in spreadsheets
+automatically. UCheck carries out automatic 
+header and unit inference, and reports unit errors to the
+users. UCheck is based on two static analyses phases that infer
+header and unit information for all cells in a spreadsheet. 
+<p>
+We have tested UCheck on a wide variety of spreadsheets and found
+that it works accurately and reliably. The system was also used in a
+continuing education course for high school teachers, conducted
+through Oregon State University, aimed at making the participants
+aware of the need for quality control in the creation of spreadsheets. 
+<p>
+<a href="DimErrors_JVLC09.pdf">Paper.pdf</a> (548K)
+
+
+<hr><a NAME="VLHCC09a"></a><h3>
+Combining Spatial and Semantic Label Analysis</h3> 
+Chris Chambers and Martin Erwig.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://eecs.oregonstate.edu/vlhcc09/">(VL/HCC'09)</a>,
+225-232, 2009
+<p>
+Labels in spreadsheets can be exploited for finding errors in 
+spreadsheet formulas. Previous approaches have either used the 
+positional information of labels or their interpretation as 
+dimension for checking the consistency of formulas. 
+
+In this paper we demonstrate how these two approaches can be combined. We have 
+formalized a combined reasoning system and have implemented a 
+corresponding prototype system. We have evaluated the system on 
+the EUSES spreadsheet corpus. The evaluation has demonstrated that 
+adding a syntactic, spatial analysis to a dimension inference can 
+significantly improve the rate of detected errors.
+<p>
+<a href="SpatialSemanticAnalysis_VLHCC09.pdf">Paper.pdf</a> (1.2M)
+
+
+
+<hr><a NAME="VLHCC09b"></a><h3>
+Visual Explanations of Probabilistic Reasoning</h3> 
+Martin Erwig and Eric Walkingshaw.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://eecs.oregonstate.edu/vlhcc09/">(VL/HCC'09)</a>,
+23-27, 2009
+<p>
+Continuing our research in explanation-oriented language design, we present a
+domain-specific visual language for explaining probabilistic reasoning.
+Programs in this language, called explanation objects, can be manipulated
+according to a set of laws to automatically generate many equivalent
+explanation instances.  We argue that this increases the
+explanatory power of our language by allowing a user to view a problem from
+many different perspectives.
+<p>
+<a href="VisExplProbReasoning_VLHCC09.pdf">Paper.pdf</a> (272K)
+
+
+
+<hr><a NAME="DSL09a"></a><h3>
+Varying Domain Representations in Hagl -
+Extending the Expressiveness of a DSL for Experimental Game Theory
+</h3> 
+Eric Walkingshaw and Martin Erwig.
+<i>IFIP Working Conference on Domain Specific Languages</i>
+<a href="http://resource-aware.org/twiki/bin/view/WG211/DSLWC">(DSLWC'09)</a>,
+LNCS 5658, 310-334, 2009
+<p>
+Experimental game theory is an increasingly important research tool in many
+fields, providing insight into strategic behavior through simulation and 
+experimentation on game theoretic models.  Unfortunately, despite relying 
+heavily on automation, this approach has not been well supported by tools.  
+Here we present our continuing work on Hagl, a domain-specific language 
+embedded in Haskell, intended to drastically reduce the development time of 
+such experiments and support a highly explorative research style.
+
+In this paper we present a fundamental redesign of the underlying game 
+representation in Hagl.  These changes allow us to better leverage domain 
+knowledge by allowing different classes of games to be represented differently, 
+exploiting existing domain representations and algorithms.  In particular, we 
+show how this supports analytical extensions to Hagl, and makes strategies 
+for state-based games vastly simpler and more efficient.
+<p>
+<a href="HaglRep_DSL09.pdf">Paper.pdf</a> (212K)
+
+
+<hr><a NAME="DSL09b"></a><h3>
+A DSL for Explaining Probabilistic Reasoning
+</h3> 
+Martin Erwig and Eric Walkingshaw.
+<i>IFIP Working Conference on Domain Specific Languages</i>
+<a href="http://resource-aware.org/twiki/bin/view/WG211/DSLWC">(DSLWC'09)</a>,
+LNCS 5658, 335-359, 2009
+<br><b><i>Best Paper Award</i></b>
+<p>
+We propose a new focus in language design where languages provide
+constructs that not only describe the computation of results, but also
+produce explanations of how and why those results were obtained.  We
+posit that if users are to understand computations produced by a
+language, that language should provide explanations to the user.
+
+As an example of such an explanation-oriented language we present a
+domain-specific language for explaining probabilistic reasoning, a
+domain that is not well understood by non-experts.  We show the design
+of the DSL in several steps.  Based on a story-telling metaphor of
+explanations, we identify generic constructs for building stories out
+of events, and obtaining explanations by applying stories to specific
+examples.  These generic constructs are then adapted to the particular
+explanation domain of probabilistic reasoning.  Finally, we develop a
+visual notation for explaining probabilistic reasoning.
+<p>
+<a href="ExplainProbReasoning_DSL09.pdf">Paper.pdf</a> (592K)
+
+
+
+<hr><a NAME="IDETC09"></a><h3>
+A Formal Representation of Software-Hardware System Design
+</h3> 
+Eric Walkingshaw, Paul Strauss, Martin Erwig, Jonathan Mueller, Irem Tumer
+<i>ASME Int.  Design Engineering Technical Conference &amp; 
+Computers and Information in Engineering Conference</i>
+<a href="http://www.asmeconferences.org/idetc09/">(IDETC'09)</a>,
+<!-- ??? --> 2009
+<p>
+The design of hardware-software systems is a complex and 
+difficult task exacerbated by the very different tools used by 
+designers in each field. Even in small projects, tracking the impact, 
+motivation and context of individual design decisions between 
+designers and over time quickly becomes intractable. In an 
+attempt to bridge this gap, we present a general, low-level model 
+of the system design process. We formally define the concept of a 
+design decision, and provide a hierarchical representation of both 
+the design space and the context in which decisions are made. 
+This model can serve as a foundation for software-hardware 
+system design tools which will help designers cooperate more 
+efficiently and effectively. We provide a high-level example of the 
+use of such a system in a design problem provided through 
+collaboration with NASA.
+<p>
+<a href="HS-Design_IDETC09.pdf">Paper.pdf</a> (380K)
+
+
+
+<hr><a NAME="TSE09"></a><h3>
+Mutation Operators for Spreadsheets</h3> 
+Robin Abraham and Martin Erwig.
+<i><a href="http://computer.org/tc/">
+IEEE Transactions on Software Engineering</a>, 
+Vol. 35</i>, No. 1, 94-108, 2009
+<p>
+Based on (1) research into mutation testing for general purpose programming 
+languages, and (2) spreadsheet errors that have been reported in literature, 
+we have developed a suite of mutation operators for spreadsheets. 
+
+We present an evaluation of the mutation adequacy of du-adequate test suites
+generated by a constraint-based automatic test-case generation system we have 
+developed in previous work. The results of the evaluation suggest additional
+constraints that can be incorporated into the system to target mutation adequacy. 
+<p>
+In addition to being useful in mutation testing of spreadsheets, the operators 
+can be used in the evaluation of error-detection tools and also for seeding 
+spreadsheets with errors for empirical studies. We describe two case studies 
+where the suite of mutation operators helped us carry out such empirical
+evaluations.
+
+The main contribution of this paper is the suite of mutation operators for 
+spreadsheets that can (1) help with systematic mutation testing of
+spreadsheets, and (2) be used for carrying out empirical evaluations of 
+spreadsheet tools. 
+<p>
+<a href="MutationOps_TSE09.pdf">Paper.pdf</a> (2.4M)
+
+
+<hr><a NAME="Enc09"></a><h3>
+Spreadsheet Programming</h3> 
+Robin Abraham and Margaret M. Burnett and Martin Erwig.
+<i><a href="http://www.wiley-vch.de/publish/en/books/specialOffer/0-471-38393-7/">
+Encyclopedia of Computer Science and Engineering</a></i>, 
+(ed. B.J. Wah),
+2804-2810, 2009
+<p>
+Spreadsheets are among the most widely used programming systems in
+the world. Individuals and businesses use spreadsheets for a wide variety of
+applications, ranging from performing simple calculations to building complex
+financial models. In this article, we first discuss how spreadsheet programs
+are actually functional programs. We then describe concepts in spreadsheet
+programming, followed by a brief history of spreadsheet systems. Widespread
+use of spreadsheets, coupled with their high error-proneness and the impact of
+spreadsheet errors, has motivated research into techniques aimed at the
+prevention, detection, and correction of errors in spreadsheets. We present an
+overview of research effort that seeks to rectify this problem.
+<p>
+<a href="SpreadsheetProgramming_ECSE09.pdf">Paper.pdf</a> (660K)
+
+
+
+<hr><a NAME="VLHCC08a"></a><h3>
+Test-Driven Goal-Directed Debugging in Spreadsheets</h3> 
+Robin Abraham and Martin Erwig.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://vlhcc08.cs.unibw.de/">(VL/HCC'08)</a>,
+131-138, 2008
+<p>
+We present an error-detection and -correction approach for spreadsheets that
+automatically generates questions about input/output pairs and, depending on
+the feedback given by the user, proposes changes to the spreadsheet that would
+correct detected errors. This approach combines and integrates previous work
+on automatic test-case generation and goal-directed debugging. We have
+implemented this method as an extension to MS Excel. We carried out an
+evaluation of the system using spreadsheets seeded with faults using mutation
+operators. The evaluation shows among other things that up to 93% of the
+first-order mutants and 98% of the second-order mutants were detected by the
+system using the automatically generated test cases.
+<p>
+<a href="TestDrivenDebugging_VLHCC08.pdf">Paper.pdf</a> (780K)
+
+
+<hr><a NAME="VLHCC08b"></a><h3>
+Dimension Inference in Spreadsheets</h3> 
+Chris Chambers and Martin Erwig.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://vlhcc08.cs.unibw.de/">(VL/HCC'08)</a>,
+123-130, 2008
+<br><b><i>Best Paper Award</i></b>
+<p>
+We present a reasoning system for inferring dimension information in
+spreadsheets. This system can be used to check the consistency of spreadsheet
+formulas and can be employed to detect errors in spreadsheets.
+
+We have prototypically implemented the system as an add-in to Excel.  In an
+evaluation of this implementation we were able to detect dimension errors in
+almost 50% of the
+investigated spreadsheets, which shows (i) that the system works reliably in
+practice and (ii) that dimension information can be well exploited to uncover
+errors in spreadsheets.  
+<p>
+<a href="DimensionInference_VLHCC08.pdf">Paper.pdf</a> (258K)
+
+
+
+<hr><a NAME="VLHCC08c"></a><h3>
+A Visual Language for Representing and Explaining Strategies in Game Theory</h3> 
+Martin Erwig and Eric Walkingshaw.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://vlhcc08.cs.unibw.de/">(VL/HCC'08)</a>,
+101-108, 2008
+<p>
+We present a visual language for strategies in game theory,
+which has potential applications in economics, social sciences, and in general
+science education. This language facilitates explanations of strategies by
+visually representing the interaction of players' strategies with game
+execution. We have utilized the cognitive dimensions framework in the design
+phase and recognized the need for a new cognitive dimension of "traceability"
+that considers how well a language can represent the execution of a program.
+We consider how traceability interacts with other cognitive dimensions and
+demonstrate its use in analyzing existing languages. We conclude that the
+design of a visual representation for execution traces should be an integral
+part of the design of visual languages because understanding a program is
+often tightly coupled to its execution.
+<p>
+<a href="VisualStrategies_VLHCC08.pdf">Paper.pdf</a> (399K)
+
+
+
+<hr><a NAME="JAOT08"></a><h3>
+The Inverse Ocean Modeling System. Part I: Implementation</h3>
+Andrew F. Bennett, Boon S. Chua, Martin Erwig, Zhe Fu, Rich D. Loft, Julia C.
+Muccino, and Ben Pflaum
+<br><i><a href="http://www.ametsoc.org/pubs/journals/jtech/index.html">
+Journal of Atmospheric and Oceanic Technology</a>, Vol. 25</i>, 
+Issue 9, 1608-1622, 2008
+
+<p> The Inverse Ocean Modeling (IOM) system constructs and runs
+weak-constraint, four-dimensional variational data assimilation (W4DVAR) for
+any dynamical model and any observing array. The dynamics and the observing
+algorithms may be nonlinear but must be functionally smooth. The user need
+only provide the model and the observing algorithms, together with an
+interpolation scheme that relates the model numerics to the observer's
+coordinates. All other model-dependent elements of the Inverse Ocean Modeling
+assimilation algorithm, including adjoint
+generators and Monte Carlo estimates of posteriors, have been derived and
+coded as templates in Parametric FORTRAN. This language has
+been developed for the IOM but has wider application in scientific
+programming. Guided by the Parametric FORTRAN templates, and by model
+information entered via a graphical user interface (GUI), the IOM generates
+conventional FORTRAN code for each of the many algorithm elements, customized
+to the user's model. The IOM also runs the various W4DVAR assimilations, which
+are monitored by the GUI. The system is supported by a Web site that includes
+interactive tutorials for the assimilation algorithm.
+<p>
+<a href="http://ams.allenpress.com/perlserv/?request=res-loc&uri=urn%3Aap%3Apdf%3Adoi%3A10.1175%2F2008JTECHO519.1">
+Paper.pdf</a>
+
+
+
+<hr><a NAME="VLHCC07"></a><h3>
+A Type System Based on End-User Vocabulary</h3> 
+Robin Abraham, Martin Erwig, and Scott Andrew.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://vlhcc07.eecs.wsu.edu/">(VL/HCC'07)</a>,
+215-222, 2007
+<p>
+In previous work we have developed a system that automatically checks for unit
+errors in spreadsheets. In this paper we describe our experiences using the
+system in a workshop on spreadsheet safety aimed at high school teachers and
+students. We present the results from a think-aloud study we conducted with
+five high school teachers and one high school student as the subjects. The
+study is the first ever to investigate the usability of a type system in
+spreadsheets. We discovered that end users can effectively use the system to
+debug a variety of errors in their spreadsheets. This result is encouraging
+given that type systems are difficult even for programmers. The subjects had
+difficulty debugging "non-local" unit errors. Guided by the results of the
+study we devised new methods to improve the error-location inference. We also
+extended the system to generate change suggestions for cells with unit errors,
+which when applied, would correct unit errors. These extensions solved the
+problem that the study revealed in the original system.
+<p>
+<a href="EndUserTypeSystem_VLHCC07.pdf">Paper.pdf</a> (680K)
+
+
+
+<hr><a NAME="JOT07"></a><h3>
+ClassSheets - Model-Based, Object-Oriented Design of Spreadsheet Applications</h3>
+Jan-Christopher Bals, Fabian Christ, Gregor Engels, and Martin Erwig.
+<i><a href="http://www.jot.fm">
+Journal of Object Technologies</a> Vol. 6</i>, No. 9, 2007
+<p>
+Using spreadsheets is the preferred method to calculate, display or store
+anything that fits into a table-like structure. They are often used by end
+users to create applications. But they have one critical drawback - they are
+very error-prone.  To reduce the error-proneness, we purpose a new way of
+object-oriented modeling of spreadsheets prior to using them. These
+spreadsheet models, termed ClassSheets, are used to generate concrete
+spreadsheets on the instance level.  By this approach sources of errors are
+reduced and spreadsheet applications are easier to understand.
+<p>
+<a href="http://www.jot.fm/issues/issue_2007_10/paper19.pdf">Paper.pdf</a>
+
+
+
+<hr><a NAME="Dagstuhl07"></a><h3>
+Exploiting Domain-Specific Structures For End-User Programming Support
+Tools</h3>
+Robin Abraham and Martin Erwig.
+<i><a href="http://drops.dagstuhl.de/portals/index.php?semnr=07081">
+End-User Software Engineering</a></i> (eds. Burnett, Engels, Myers, and
+Rothermel), 2007
+<p>
+In previous work we have tried to transfer ideas that have been successful in
+general-purpose programming languages and mainstream software engineering into
+the realm of spreadsheets, which is one important example of an end-user
+programming environment.
+
+More specifically, we have addressed the questions of how to employ the
+concepts of type checking, program generation and maintenance, and testing in
+spreadsheets. While the primary objective of our work has been to offer
+improvements for end-user productivity, we have tried to follow two
+particular principles to guide our research.
+<ul>
+<li> Keep the number of new concepts to be learned by end users at a minimum.
+<li> Exploit as much as possible information offered by the internal
+structure of spreadsheets.
+</ul>
+In this paper we will illustrate our research approach with several examples.
+<p>
+<a href="http://drops.dagstuhl.de/opus/volltexte/2007/1086/pdf/07081.ErwigMartin.ExtAbstract.1086.pdf">
+Paper.pdf</a>
+
+
+
+<hr><a NAME="SCP07"></a><h3>
+An Update Calculus for Expressing Type-Safe Program Updates</h3> 
+Martin Erwig and Deling Ren.
+<i><a href="http://www.sciencedirect.com/science/journal/01676423">
+Science of Computer Programming</a> Vol. 67</i>,
+No. 2-3, 199-222, 2007
+<p>
+The dominant share of software development costs is spent on software
+maintenance, particularly the process of updating programs in response to
+changing requirements.  Currently, such program changes tend to be performed
+using text editors, an unreliable method that often causes many errors.  In
+addition to syntax and type errors, logical errors can be easily introduced
+since text editors cannot guarantee that  changes are performed consistently
+over the whole program. All these errors can cause a correct and
+perfectly running program to become instantly unusable.  It is not surprising
+that this situation exists because the "text-editor method" reveals a low-level
+view of programs that fails to reflect the structure of programs.
+<p>
+We address this problem by pursuing a programming-language-based approach to
+program updates. To this end we discuss in this paper the design and
+requirements of an update language for expressing update programs. We identify
+as the essential part of any update language a \emph{scope update} that
+performs coordinated update of the definition and all uses of a symbol.
+
+As the underlying basis for update languages, we define an update calculus for
+updating lambda-calculus programs. We develop a type system for the update
+calculus that infers the possible type changes that can be caused by an update
+program.  We demonstrate that type-safe update programs that fulfill certain
+structural constraints preserve the type-correctness of lambda terms.  
+
+The update calculus can serve as a basis for higher-level update languages,
+such as for Haskell or Java. 
+<p>
+<a href="UpdateCalculus_SCP07.pdf">Paper.pdf</a> (384K)
+
+
+<hr><a NAME="JSME07"></a><h3>
+Parametric Fortran: Program Generation in Scientific Computing</h3> 
+Martin Erwig and Zhe Fu and Ben Pflaum
+<i><a href="http://www3.interscience.wiley.com/cgi-bin/jhome/77004487">
+Journal of Software Maintenance and Evolution</a> Vol. 19</i>,  
+No. 3, 155-182, 2007
+
+<p>
+Parametric Fortran is an extension of Fortran that supports defining Fortran
+program templates by allowing the parameterization of arbitrary Fortran
+constructs. A Fortran program template can be translated into a regular
+Fortran program guided by values for the parameters. This paper describes the
+design, implementation, and applications of Parametric Fortran. Parametric
+Fortran is particularly useful in scientific computing. The applications
+include defining generic functions, removing duplicated code, and automatic
+differentiation. The described techniques have been successfully employed in
+a project that implements a generic inverse ocean modeling system.
+<p>
+<a href="PF_JSME07.pdf">Paper.pdf</a> (415K)
+
+
+<hr><a NAME="ICSE07"></a><h3>
+GoalDebug: A Spreadsheet Debugger for End Users</h3>
+Robin Abraham and Martin Erwig.
+<i>29th ACM/IEEE Int. Conf. on Software Engineering</i>
+<a href="http://web4.cs.ucl.ac.uk/icse07/">(ICSE'07)</a>,
+251-260, 2007
+<p>
+We present a spreadsheet debugger targeted at end users.
+Whenever the computed output of a cell is incorrect, the user can supply an
+expected value for a cell, which is employed by the system to generate a list
+of change suggestions for formulas that, when applied, would result in the
+user-specified output. The change suggestions are ranked using a set of
+heuristics. 
+<p>
+In previous work, we had presented the system as a proof of concept. In this
+paper, we describe a systematic evaluation of the effectiveness of inferred
+change suggestions and the employed ranking heuristics.
+Based on the results of the evaluation we have extended both, the change
+inference process and the ranking of suggestions. An evaluation of the
+improved system shows that change inference process and the ranking heuristics
+have both been substantially improved and that the system performs
+effectively.
+<p>
+<a href="GoalDebug_ICSE07.pdf">Paper.pdf</a> (282K)
+
+
+
+<hr><a NAME="JVLC07"></a><h3>
+UCheck: A Spreadsheet Unit Checker for End Users</h3> 
+Robin Abraham and Martin Erwig. 
+<i><a href="http://store.elsevier.com/product.jsp?isbn=1045926X">
+Journal of Visual Languages and Computing</a> Vol. 18</i>, 
+No. 1, 71-95, 2007
+<p>
+Spreadsheets are widely used, and studies have shown that most
+end-user spreadsheets contain non-trivial errors. Most of the
+currently available tools that try to mitigate this problem require 
+varying levels of user intervention. This paper presents a
+system, called UCheck, that detects errors in spreadsheets
+automatically. UCheck carries out automatic 
+header and unit inference, and reports unit errors to the
+users. UCheck is based on two static analyses phases that infer
+header and unit information for all cells in a spreadsheet. 
+<p>
+We have tested UCheck on a wide variety of spreadsheets and found
+that it works accurately and reliably. The system was also used in a
+continuing education course for high school teachers, conducted
+through Oregon State University, aimed at making the participants
+aware of the need for quality control in the creation of spreadsheets. 
+<p>
+<a href="UCheck_JVLC07.pdf">Paper.pdf</a> (2M)
+
+
+
+<hr><a NAME="Haskell06"></a><h3>
+A Generic Recursion Toolbox for Haskell 
+(Or: Scrap Your Boilerplate Systematically)</h3> 
+Deling Ren and Martin Erwig. 
+<i><a href="http://haskell.org/haskell-workshop/2006/">
+ACM SIGPLAN Haskell Workshop</a></i>, 
+13-24, 2006
+<p>
+  Haskell programmers who deal with complex data types often need to apply
+  functions to specific nodes deeply nested inside of terms. Typically,
+  implementations for those applications require so-called boilerplate code,
+  which recursively visits the nodes and carries the functions to the places
+  where they need to be applied. The scrap-your-boilerplate approach proposed by
+  L&auml;mmel and Peyton Jones tries to solve this problem by defining a general
+  traversal design pattern that performs the traversal automatically so that the
+  programmers can focus on the code that performs the actual transformation.
+<p>
+  In practice we often encounter applications that require variations of the
+  recursion schema and call for more sophisticated generic traversals. Defining
+  such traversals from scratch requires a profound understanding of the
+  underlying mechanism and is everything but trivial.
+<p>
+  In this paper we analyze the problem domain of recursive traversal strategies,
+  by integrating and extending previous approaches. We then extend the
+  scrap-your-boilerplate approach by rich traversal strategies and by a
+  combination of transformations and accumulations, which leads to a
+  comprehensive recursive traversal library in a statically typed framework.
+<p>
+  We define a two-layer library targeted at general programmers and programmers
+  with knowledge in traversal strategies. The high-level interface defines a
+  universal combinator that can be customized to different one-pass traversal
+  strategies with different coverage and different traversal order. The
+  lower-layer interface provides a set of primitives that can be used for
+  defining more sophisticated traversal strategies such as fixpoint
+  traversals. The interface is simple and succinct. Like the original
+  scrap-your-boilerplate approach, it makes use of rank-2 polymorphism and
+  functional dependencies, implemented in GHC.
+<p>
+<!-- <a href="RecLib_Haskell06.pdf">Paper.pdf</a> (196K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?821747">Paper.pdf</a>
+
+
+
+<hr><a NAME="VLHCC06a"></a><h3>
+AutoTest: A Tool for Automatic Test Case Generation in Spreadsheets</h3> 
+Robin Abraham and Martin Erwig.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://www.cmis.brighton.ac.uk/vlhcc/">(VL/HCC'06)</a>,
+43-50, 2006
+<p>
+In this paper we present a system that helps users test their spreadsheets
+using automatically generated test cases. The system generates the test cases
+by backward propagation and solution of constraints on cell values. These
+constraints are obtained from the formula of the cell that is being tested
+when we try to execute all feasible <i>du-paths</i> within the formula.
+AutoTest 
+generates test cases that execute all feasible du-pairs. If infeasible
+du-associations are present in the spreadsheet, the system is capable of
+detecting and reporting all of these to the user. We also present a
+comparative evaluation of our approach against the "Help Me Test" mechanism in
+Forms/3 and show that our approach is faster and produces test suites that
+give better du-coverage.
+<p>
+<a href="AutoTest_VLHCC06.pdf">Paper.pdf</a> (522K)
+
+
+
+<hr><a NAME="VLHCC06b"></a><h3>
+Sharing Reasoning about Faults in Spreadsheets: An Empirical Study</h3> 
+Joey Lawrence, Robin Abraham, Margaret Burnett, and Martin Erwig.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://www.cmis.brighton.ac.uk/vlhcc/">(VL/HCC'06)</a>,
+35-42, 2006
+<p>
+Although researchers have developed several ways to
+reason about the location of faults in spreadsheets, no single
+form of reasoning is without limitations. Multiple types
+of errors can appear in spreadsheets, and various fault localization
+techniques differ in the kinds of errors that they
+are effective in locating. In this paper, we report empirical
+results from an emerging system that attempts to improve
+fault localization for end-user programmers by sharing the
+results of the reasoning systems found in WYSIWYT and
+<a href="../UCheck/">UCheck</a>. 
+By evaluating the visual feedback from each fault
+localization system, we shed light on where these different
+forms of reasoning and combinations of them complement
+- and contradict - one another, and which heuristics can
+be used to generate the best advice from a combination of
+these systems.
+<p>
+<a href="SharedReasoning_VLHCC06.pdf">Paper.pdf</a> (934K)
+
+
+<hr><a NAME="PPDP06"></a><h3>
+Type Inference for Spreadsheets</h3>
+Robin Abraham and Martin Erwig.
+<i>ACM Int. Symp. on Principles and Practice of Declarative Programming</i>
+<a href="http://www.dsi.unive.it/ppdp2006">(PPDP'06)</a>,
+73-84, 2006
+<p>
+Spreadsheets are the most popular programming systems in use today. Since
+spreadsheets are visual, first-order functional languages, research into the
+foundations of spreadsheets is therefore a highly relevant topic for the
+principles and, in particular, the practice, of declarative programming.
+
+Since the error rate in spreadsheets is very high and since those errors have
+significant impact, methods and tools that can help detect and remove errors
+from spreadsheets are very much needed. Type systems have traditionally played
+a strong role in detecting errors in programming languages, and it is
+therefore reasonable to ask whether type systems could not be helpful in
+improving the current situation of spreadsheet programming.
+
+In this paper we introduce a type system and a type inference
+algorithm for spreadsheets and demonstrate how this algorithm and the
+underlying typing concept can identify programming errors in spreadsheets.
+In addition, we also demonstrate how the type inference algorithm can be
+employed to infer models, or specifications, for spreadsheets, which can be
+used to prevent future errors in spreadsheets.
+<p>
+<!-- <a href="TypeInf_PPDP06.pdf">Paper.pdf</a> (1M) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?817627">Paper.pdf</a>
+
+
+<hr><a NAME="ICSE06"></a><h3>
+Inferring Templates from Spreadsheets</h3>
+Robin Abraham and Martin Erwig.
+<i>28th ACM/IEEE Int. Conf. on Software Engineering</i>
+<a href="http://www.isr.uci.edu/icse-06/">(ICSE'06)</a>,
+182-191, 2006
+<p>
+
+We present a study investigating the performance of a system for automatically
+inferring spreadsheet templates. These templates allow users to safely edit
+spreadsheets, that is, certain kinds of errors such as range, reference, and
+type errors can be provably prevented. Since the inference of templates is
+inherently ambiguous, such a study is required to demonstrate the
+effectiveness of any such automatic system. The study results show that the
+system considered performs significantly better than subjects with
+intermediate to expert level programming expertise. These results are
+important because the translation of existing spreadsheets into a system based
+on safety-guaranteeing templates cannot be performed without automatic
+support.  We carried out post-hoc analyses of the video recordings of the
+subjects' interactions with the spreadsheets and found that expert-level
+subjects spend less time and inspect fewer cells in the spreadsheet and
+develop more accurate templates than less experienced subjects.
+<p>
+<!-- <a href="TemplateInference_ICSE06.pdf">Paper.pdf</a> (1M) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?800896">Paper.pdf</a>
+
+
+
+<hr><a NAME="WEUSE06"></a><h3>
+Toward Sharing Reasoning to Improve Fault Localization in Spreadsheets</h3> 
+Joey Lawrence, Robin Abraham, Margaret Burnett, and Martin Erwig.
+<i>2nd Workshop on End-User Software Engineering</i>
+<a href="http://eusesconsortium.org/weuse/">(WEUSE'06)</a>,
+35-42, 2006
+<p>
+Although researchers have developed several ways to reason about
+the location of faults in spreadsheets, no single form of reasoning is
+without limitations. Multiple types of errors can appear in spreadsheets,
+and various fault localization techniques differ in the kinds
+of errors that they are effective in locating. Because end users who
+debug spreadsheets consistently follow the advice of fault localization
+systems, it is important to ensure that fault localization
+feedback corresponds as closely as possible to where the faults actually
+appear.
+<p>
+In this paper, we describe an emerging system that attempts to improve
+fault localization for end-user programmers by sharing the
+results of the reasoning systems found in WYSIWYT  and
+UCheck. By understanding the strengths and weaknesses of
+the reasoning found in each system, we expect to identify where
+different forms of reasoning complement one another, when different
+forms of reasoning contradict one another, and which heuristics
+can be used to select the best advice from each system. By using
+multiple forms of reasoning in conjunction with heuristics to choose
+among recommendations from each system, we expect to produce
+unified fault localization feedback whose combination is better than
+the sum of the parts.
+<p><a href="Sharing_WEUSE06.pdf">Paper.pdf</a> (524K)
+
+
+<hr><a NAME="JFP06b"></a><h3>
+Gencel: A Program Generator for Correct Spreadsheets</h3>
+Martin Erwig, Robin Abraham, Irene Cooperstein, and Steve Kollmansberger. 
+<i><a href="http://www.cambridge.org/jfp">
+Journal of Functional Programming</a> Vol. 16</i>, 
+No. 3, 293-325, 2006
+<p>
+A huge discrepancy between theory and practice exists in one popular
+application area of functional programming-spreadsheets. Although
+spreadsheets are the most frequently used (functional) programs, they fall
+short of the quality level that is expected of functional programs, which
+is evidenced by the fact that existing spreadsheets contain many errors, some
+of which have serious impacts.
+<p>
+We have developed a template specification language that allows the definition
+of spreadsheet templates that describe possible spreadsheet evolutions. This
+language is based on a table calculus that formally captures the process of
+creating and modifying spreadsheets.
+We have developed a type system for this calculus that can prevent
+type, reference, and omission errors from occurring in spreadsheets.
+On the basis of the table calculus we have developed Gencel, a system for
+generating reliable spreadsheets.  We have implemented a prototype version of
+Gencel as an extension of Excel. 
+<p><a href="Gencel_JFP05.pdf">Paper.pdf</a> (693K)
+
+
+<hr><a NAME="JVLC06"></a><h3>
+Visual Type Inference</h3> Martin Erwig. 
+<i><a href="http://store.elsevier.com/product.jsp?isbn=1045926X">
+Journal of Visual Languages and Computing</a> Vol. 17</i>, 
+No. 2, 161-186, 2006
+
+<p>
+We describe a type-inference algorithm that is based on labeling nodes with
+type information in a graph that represents type constraints. This algorithm
+produces the same results as the famous algorithm of Milner, but is much
+simpler to use, which is of importance especially for teaching type systems
+and type inference.
+<p>
+The proposed algorithm employs a more concise notation and yields inferences
+that are shorter than applications of the traditional algorithm.
+Simplifications result, in particular, from three facts:
+(1) We do not have to maintain an explicit type environment throughout the
+algorithm because the type environment is represented implicitly through node
+labels. 
+(2) The use of unification is simplified through label propagation along graph
+edges.
+(3) The typing decisions in our algorithm are dependency-driven (and not
+syntax-directed), which reduces notational overhead and bookkeeping. 
+<p>   <a href="VisualTypeInf_JVLC06.pdf">Paper.pdf</a> (217K)
+
+
+<hr><a NAME="PADL06"></a><h3>
+Modeling Genome Evolution with a DSEL for Probabilistic Programming
+</h3> Martin Erwig and Steve Kollmansberger.
+<i>8th Int. Symp. on Practical Aspects of Declarative Languages</i>
+<a href="http://www.cs.brown.edu/people/pvh/PADL06.html">(PADL'06)</a>, 
+<a href="http://www.springeronline.com/3-540-30947-0">LNCS 3819</a>, 134-149, 2006
+
+<p>
+Many scientific applications benefit from simulation.
+However, programming languages used in simulation, such as C++ or Matlab,
+approach problems from a deterministic procedural view, which seems to differ,
+in general, from many scientists' mental representation.  We apply a
+domain-specific language for probabilistic programming to the biological field
+of gene modeling, showing how the mental-model gap may be bridged.  Our system
+assisted biologists in developing a model for genome evolution by separating
+the concerns of model and simulation and providing implicit probabilistic
+non-determinism.
+<p><a href="GenomeEvolution_PADL06.pdf">Paper.pdf</a> (199K)
+
+
+<hr><a NAME="PEPM06"></a><h3>
+Generic Programming in Fortran
+</h3> Martin Erwig, Zhe Fu and Ben Pflaum.
+<i>ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation</i>
+<a href="http://www.cis.ksu.edu/santos/pepm06/">(PEPM'06)</a>, 
+130-193, 2006
+<p>
+Parametric Fortran is an extension of Fortran that supports the
+construction of generic programs by allowing the parameterization of
+arbitrary Fortran constructs. A parameterized Fortran program can be
+translated into a regular Fortran program guided by values for the
+parameters. This paper describes the extensions of Parametric Fortran
+by two new language features, accessors and list parameters. These
+features particularly address the code duplication problem, which is
+a major problem in the context of scientific computing. The described
+techniques have been successfully employed in a project that
+implements a generic inverse ocean modeling system.
+<p>
+<!-- <a href="GenericFortran_PEPM06.pdf">Paper.pdf</a> (147K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?899576">Paper.pdf</a>
+
+
+<hr><a NAME="JFP06a"></a><h3>
+Probabilistic Functional Programming in Haskell</h3> 
+Martin Erwig and Steve Kollmansberger. 
+<i><a href="http://www.cambridge.org/jfp">
+Journal of Functional Programming</a>, Vol. 16</i>, No. 1, 21-34, 2006
+<p>
+At the heart of functional programming rests the principle of referential
+transparency, which in particular means that a function <i>f</i> applied
+to a value <i>x</i> always yields one and the same value <i>y=f(x)</i>.
+This principle seems to be violated when contemplating the use of functions to
+describe probabilistic events, such as rolling a die: It is not clear at all
+what exactly the outcome will be, and neither is it guaranteed that the same
+value will be produced repeatedly.
+However, these two seemingly incompatible notions can be reconciled if
+probabilistic values are encapsulated in a data type. 
+
+<p>
+In this paper, we will demonstrate such an approach by describing a
+probabilistic functional programming (PFP) library for Haskell. We will show
+that the proposed approach not only facilitates probabilistic programming in
+functional languages, but in particular can lead to very concise programs and
+simulations. In particular, a major advantage of our system is that 
+simulations can be specified independently from their method of execution.  
+That is, we can either fully simulate or randomize any 
+simulation without altering the code which defines it.
+<p><a href="PFP_JFP06.pdf">Paper.pdf</a> (160K)
+<p><a href="../pfp">Haskell Source Code</a>
+
+
+<hr><a NAME="ASE05"></a><h3>
+ClassSheets: Automatic Generation of Spreadsheet Applications
+from Object-Oriented Specifications</h3>
+Gregor Engels and Martin Erwig.
+<i>20th IEEE/ACM Int. Conf. on Automated Software Engineering</i>
+<a href="http://www.isr.uci.edu/ase2005/">(ASE'05)</a>, 124-133, 2005
+<p>
+Spreadsheets are widely used in all kinds of business applications. Numerous
+studies have shown that they contain many errors that sometimes have dramatic
+impacts. One reason for this situation is the low-level, cell-oriented
+development process of spreadsheets.
+
+We improve this process by introducing and formalizing a higher-level
+object-oriented model termed ClassSheet. While still following the tabular
+look-and-feel of spreadsheets, ClassSheets allow the developer to express
+explicitly business object structures within a spreadsheet, which is achieved
+by integrating concepts from the UML (Unified Modeling Language). A stepwise
+automatic transformation process generates a spreadsheet application that is
+consistent with the ClassSheet model. Thus, by deploying the formal
+underpinning of ClassSheets, a large variety of errors can be prevented that
+occur in many existing spreadsheet applications today.
+
+The presented ClassSheet approach links spreadsheet applications to the
+object-oriented modeling world and advocates an automatic model-driven
+development process for spreadsheet applications of high quality.
+<p>
+<!-- <a href="ClassSheets_ASE05.pdf">Paper.pdf</a> (607K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?882461">Paper.pdf</a>
+
+
+<hr><a NAME="VLHCC05a"></a><h3>
+Goal-Directed Debugging of Spreadsheets</h3> 
+Robin Abraham and Martin Erwig.
+<i>IEEE Symp. on Visual Languages and Human-centric Computing</i>
+<a href="http://viscomp.utdallas.edu/vlhcc05/">(VL/HCC'05)</a>,
+37-44, 2005
+<p>
+We present a semi-automatic debugger for spreadsheet systems that is
+specifically targeted at end-user programmers. Users can report
+expected values for cells that yield incorrect results. The system
+then generates change suggestions that could correct the error. Users
+can interactively explore, apply, refine, or reject these change
+suggestions. The computation of change suggestions is based on a
+formal inference system that propagates expected values backwards
+across formulas. The system is fully integrated into Microsoft Excel
+and can be used to automatically detect and correct various kinds of
+errors in spreadsheets. Test results show that the system works
+accurately and reliably.
+<p>
+<a href="GoalDebug_VLHCC05.pdf">Paper.pdf</a> (1M)
+
+
+<hr><a NAME="VLHCC05b"></a><h3>
+Visual Specifications of Correct Spreadsheets</h3> 
+Robin Abraham, Martin Erwig, Steve Kollmansberger, and Ethan Seifert.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="http://viscomp.utdallas.edu/vlhcc05/">(VL/HCC'05)</a>,
+189-196, 2005
+<p>
+We introduce a visual specification language for spreadsheets that allows the
+definition of spreadsheet templates.  A spreadsheet generator can
+automatically create Excel spreadsheets from these templates together with
+customized update operations. It can be shown that spreadsheets created in
+this way are free from a large class of errors, such as reference, omission,
+and type errors.
+
+We present a formal definition of the visual language for templates and
+describe the process of generating spreadsheets from templates.  In addition,
+we present an editor for templates and analyze the editor using the Cognitive
+Dimensions framework.
+<p>
+<a href="ViTSL_VLHCC05.pdf">Paper.pdf</a> (500K)
+
+
+<hr><a NAME="WEUSE05"></a><h3>
+How to Communicate Unit Error Messages in Spreadsheets</h3> 
+Robin Abraham and Martin Erwig.
+<i>1st Workshop on End-User Software Engineering</i>
+<a href="http://csce.unl.edu/~grother/weuse/">(WEUSE'05)</a>,
+52-56, 2005
+<p>
+In previous work we have designed and implemented an
+automatic reasoning system for spreadsheets, called UCheck,
+that infers unit information for cells in a spreadsheet.
+Based on this unit information, UCheck can identify cells in
+the spreadsheet that contain erroneous formulas. However,
+the information about an erroneous cell is reported to the
+user currently in a rather crude way by simply coloring the
+cell, which does not tell anything about the nature of error
+and thus offers no help to the user as to how to fix it. 
+
+In this paper we describe an extension of UCheck, called
+UFix, which improves the error messages reported to the
+spreadsheet user dramatically. The approach essentially
+consists of three steps: First, we identify different
+categories of spreadsheet errors from an end-user's
+perspective. Second, we map units that indicate erroneous
+formulas to these error categories. Finally, we create
+customized error messages from the unit information and the
+identified error category. In many cases, these error
+messages also provide suggestions on how to fix the reported
+errors.
+<p>
+<!-- <a href="UFix_WEUSE05.pdf">Paper.pdf</a> (1M) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?873115">Paper.pdf</a>
+
+
+<hr><a NAME="ICSE05"></a><h3>
+Automatic Generation and Maintenance of Correct Spreadsheets</h3>
+Martin Erwig, Robin Abraham, Irene Cooperstein, and Steve Kollmansberger.
+<i>27th ACM/IEEE Int. Conf. on Software Engineering</i>
+<a href="http://www.cs.wustl.edu/icse05/">(ICSE'05)</a>, 136-145, 2005
+<p>
+Existing spreadsheet systems allow users to change cells arbitrarily, which
+is a major source of spreadsheet errors.  We propose a system that prevents
+errors in spreadsheets by restricting spreadsheet updates to only those that
+are logically and technically correct.  The system is based on the concept of
+table specifications that describe the principal structure of the initial
+spreadsheet and all of its future versions.  We have developed a program
+generator that translates a table specification into an initial spreadsheet
+together with customized update operations for changing cells and
+inserting/deleting rows and columns for this particular specification. 
+
+We have designed a type system for table specifications that ensures the
+following form of "spreadsheet maintenance safety": Update operations that
+are generated from a type-correct table specification are proved to transform
+the spreadsheet only according to the specification and to never produce any
+omission, reference, or type errors.
+
+Finally, we have developed a prototype as an extension to Excel, which has been 
+shown by a preliminary usability study to be well accepted by end users.
+<p>
+<!-- <a href="Gencel_ICSE05.pdf">Paper.pdf</a> (235K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?860131">Paper.pdf</a>
+
+
+<hr><a NAME="TOSEM05"></a><h3>
+Software Reuse for Scientific Computing Through Program Generation</h3>
+Martin Erwig and Zhe Fu. 
+<i><a href="http://www.acm.org/tosem/">
+ACM Transactions on Software Engineering and Methodology</a>, Vol. 14</i>, 
+No. 2, 168-198, 2005
+<p>
+We present a program-generation approach to address a software-reuse challenge
+in the area of scientific computing. More specifically, we describe the design
+of a program generator for the specification of subroutines that can be
+generic in the dimensions of arrays, parameter lists, and called subroutines.
+We describe the application of that approach to a real-world problem in
+scientific computing, which requires the generic description of inverse ocean
+modeling tools.
+
+In addition to a compiler that can transform generic specifications into
+efficient Fortran code for models, we have also developed a type system that
+can identify possible errors already in the specifications. This type system
+is important for the acceptance of the program generator among scientists
+because it prevents a large class of errors in the generated code.
+<p>
+<!-- <a href="SoftwareReuseSciComp_TOSEM05.pdf">Paper.pdf</a> (363K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?852456">Paper.pdf</a>
+
+
+<hr><a NAME="VLHCC04"></a><h3>
+Header and Unit Inference for Spreadsheets Through Spatial Analyses</h3> 
+Robin Abraham and Martin Erwig.
+<i>IEEE Symp. on Visual Languages and Human-Centric Computing</i>
+<a href="  http://vlhcc04.dsi.uniroma1.it/">(VL/HCC'04)</a>,
+165-172, 2004
+<br><b><i>Best Paper Award</i></b>
+<p>
+This paper describes the design and implementation of a unit and header
+inference system for spreadsheets. The system is based on a formal model of
+units that we have described in previous work. Since the unit inference
+depends on information about headers in a spreadsheet, a realistic unit
+inference system requires a method for automatically determining headers.  The
+present paper describes (1) several spatial-analysis algorithms for header
+inference, (2) a framework that facilitates the integration
+of different algorithms, and (3) the implementation of the system.
+
+The combined header and unit inference system is fully integrated into
+Microsoft Excel and can be used to automatically identify various kinds of
+errors in spreadsheets. Test results show that the system works accurately and
+reliably.
+<p><a href="HeaderInf_VLHCC04.pdf">Paper.pdf</a> (1M)
+
+<hr><a NAME="SCP04"></a><h3>
+Monadification of Functional Programs</h3> Martin Erwig and Deling Ren. 
+<i><a href="http://www.sciencedirect.com/science/journal/01676423">
+Science of Computer Programming</a>, Vol. 52</i>, No. 1-3, 101-129, 2004
+<p>
+The structure of monadic functional programs allows the integration of many
+different features by just changing the definition of the monad and not the
+rest of the program, which is a desirable feature from a software engineering
+and software maintenance point of view.
+
+We describe an algorithm for the automatic transformation of a group of
+functions into such a monadic form. We identify two correctness criteria and
+argue that the proposed transformation is at least correct in the sense that
+transformed programs yield the same results as the original programs modulo
+monad constructors.
+
+The translation of a set of functions into monadic form is in most cases
+only a first step toward an extension of a program by new features. The
+extended behavior can be realized by choosing an appropriate monad type and
+by inserting monadic actions into the functions that have been transformed
+into monadic form. We demonstrate an approach to the integration of
+monadic actions that is based on the idea of specifying context-dependent
+rewritings.
+<p><a href="Monadify_SCP04.pdf">Paper.pdf</a> (255K)
+<!-- 
+  <p><a href="../monadify">Haskell Source Code</a>
+-->
+
+<hr><a NAME="PADL04"></a><h3>
+Parametric Fortran
+ - A Program Generator for Customized Generic Fortran Extensions
+</h3> Martin Erwig and Zhe Fu.
+<i>6th Int. Symp. on Practical Aspects of Declarative Languages</i>
+<a href="http://www.cse.buffalo.edu/PADL04/">(PADL'04)</a>,
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-22253-7">LNCS
+3057</a>, 209-223, 2004
+
+<p>
+We describe the design and implementation of a program generator that can
+produce extensions of Fortran that are specialized to support the programming
+of particular applications. Extensions are specified through parameter
+structures that can be referred to in Fortran programs to specify the
+dependency of program parts on these parameters. By providing parameter
+values, a parameterized Fortran program can be translated into a regular
+Fortran program.
+
+We describe as a real-world application of this program generator the
+implementation of a generic inverse ocean modeling tool. The program generator
+is implemented in Haskell and makes use of sophisticated features, such as
+multi-parameter type classes, existential types, and generic programming
+extensions and thus represents the application of an advanced applicative
+language to a real-world problem.
+<p><a href="ParametricFortran_PADL04.pdf">Paper.pdf</a> (150K)
+
+
+<hr><a NAME="JFP04"></a><h3>
+Escape from Zurg: An Exercise in Logic Programming</h3> Martin Erwig. 
+<i><a href="http://www.cambridge.org/jfp">
+Journal of Functional Programming</a>, Vol. 14</i>, No. 3, 253-261, 2004
+<p>In this article we will illustrate with an example that modern functional
+programming languages like Haskell can be used effectively for programming
+search problems, in contrast to the widespread belief that 
+Prolog is much better suited for tasks like these.
+<p><a href="Zurg_JFP04.pdf">Paper.pdf</a> (53K)
+<p><a href="../zurg">Haskell Source Code</a>
+
+
+<hr><a NAME="FQR04"></a><h3>
+Toward Spatiotemporal Patterns</h3> Martin Erwig. 
+<i><a
+href="http://www.springeronline.com/sgw/cda/frontpage/0,10735,5-153-22-31309058-0,00.html">
+Spatio-Temporal Databases</a></i> (eds. De Caluwe et al.), Springer,
+29-54, 2004
+<p>Existing spatiotemporal data models and query languages offer only basic
+support to query changes of data. In particular, although these systems often
+allow the formulation of queries that ask for changes at particular time
+points, they fall short of expressing queries for sequences of such changes.
+
+In this chapter we propose the concept of spatiotemporal patterns as a
+systematic and scalable concept to query developments of objects and their
+relationships. Based on our previous work on spatiotemporal predicates, we
+outline the design of spatiotemporal patterns as a query mechanism to
+characterize complex object behaviors in space and time. We will not present a
+fully-fledged design. Instead, we will focus on deriving constraints that will
+allow spatiotemporal patterns to become well-designed composable abstractions
+that can be smoothly integrated into spatiotemporal query languages. 
+
+Spatiotemporal patterns can be applied in many different areas of science, for
+example, in geosciences, geophysics, meteorology, ecology, and environmental
+studies. Since users in these areas typically do not have extended formal
+computer training, it is often difficult for them to use advanced query
+languages. A visual notation for spatiotemporal patterns can help solving this
+problem. In particular, since spatial objects and their relationships have a
+natural graphical representation, a visual notation can express relationships
+in many cases implicitly where textual notations require the explicit
+application of operations and predicates. Based on our work on the
+visualization of spatiotemporal predicates, we will sketch the design of a
+visual language to formulate spatiotemporal patterns. 
+<p><a href="STPatterns_FQR04.pdf">Paper.pdf</a> (232K)
+
+
+<hr><a NAME="XSDM03"></a><h3>
+Toward the Automatic Derivation of XML Transformations</h3> Martin Erwig.
+<i>1st Int. Workshop on XML Schema and Data Management</i>
+<a href="http://web.umr.edu/~madrias/XSDM-workshop'03.html">(XSDM'03)</a>, 
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-20257-9">LNCS
+2814</a>, 342-354, 2003
+
+<p>Existing solutions to data and schema integration require user
+interaction/input to generate a data transformation between two different
+schemas.  These approaches are not appropriate in situations where many data
+transformations are needed or where data transformations have to be generated
+frequently.
+
+We describe an approach to an automatic XML-transformation generator that
+is based on a theory of information-preserving and -approximating XML
+operations. Our approach builds on a formal semantics for XML operations and
+their associated DTD transformation and on an axiomatic theory of information
+preservation and approximation. This combination enables the inference of
+a sequence of XML transformations by a search algorithm based on the
+operations' DTD transformations.
+<p><a href="AutoXMLTransf_XSDM03.ps.gz">Paper.ps.gz</a> (160K),
+   <a href="AutoXMLTransf_XSDM03.pdf">Paper.pdf</a> (135K)
+
+
+<hr><a NAME="DEXA03"></a><h3>
+KeyQuery - A Front End for the Automatic Translation of Keywords
+into Structured Queries</h3> Martin Erwig and Jianglin He.
+<i>14th Int. Conf. on Database and Expert Systems Applications</i>
+<a href="http://www.dexa.org/dexa2003/">(DEXA'03)</a>, 
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-40806-1">LNCS
+2736</a>, 494-503, 2003
+
+<p>We  demonstrate  an  approach  to  transform  keyword  queries
+automatically  into  queries  that  combine  keywords  appropriately  by
+boolean  operations,  such  as  <b>and</b>  and  <b>or</b>.    Our  approach
+is  based  on an  analysis  of  relationships between the keywords using a
+taxonomy. The transformed queries  will be sent to a search engine, and the
+returned results will be presented to the  user. We evaluate the effectiveness
+of our approach by comparing the precision  of  the  results returned  for
+the generated query with  the precision of  the  result  for the original
+query. Our experiments indicate that our approach can improve  the precision
+of the results considerably.
+<p><a href="KeyQuery_DEXA03.ps.gz">Paper.ps.gz</a> (152K),
+   <a href="KeyQuery_DEXA03.pdf">Paper.pdf</a> (256K)
+
+
+<hr><a NAME="ESOP03"></a><h3>
+Type-Safe Update Programming</h3> Martin Erwig and Deling Ren.
+<i>12th European Symp. on Programming</i>
+<a href="http://www.di.unipi.it/ESOP03/">(ESOP'03)</a>, 
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-00886-1">LNCS
+2618</a>, 269-283, 2003
+
+<p>Many software maintenance problems are caused by using text editors to change
+programs. A more systematic and reliable way of performing program updates is
+to express changes with an update language. In particular, updates should
+preserve the syntax- and type-correctness of the transformed object programs.
+
+We describe an update calculus that can be used to update lambda-calculus
+programs. We develop a type system for the update language that infers the
+possible type changes that can be caused by an update program. We demonstrate
+that type-safe update programs that fulfill certain structural constraints
+preserve the type-correctness of lambda terms. 
+<p><a href="TypeSafeUpdates_ESOP03.ps.gz">Paper.ps.gz</a> (164K),
+   <a href="TypeSafeUpdates_ESOP03.pdf">Paper.pdf</a> (159K)
+
+
+<hr><a NAME="JVLC03"></a><h3>
+Xing: A Visual XML Query Language</h3> Martin Erwig. 
+<i><a href="http://store.elsevier.com/product.jsp?isbn=1045926X">
+Journal of Visual Languages and Computing</a>, Vol. 14</i>, 
+No. 1, 5-45, 2003
+<p>We present a visual language for querying and transforming XML data. The
+language is based on a visual document metaphor and the notion of document
+patterns and rules. It combines a dynamic form-based interface for defining
+queries and transformation rules with powerful pattern matching capabilities
+and offers thus a highly expressive visual language. The design of the visual
+language is specifically targeted at end users.
+<p><a href="Xing_JVLC02.ps.gz">Paper.ps.gz</a> (114K),
+   <a href="Xing_JVLC02.pdf">Paper.pdf</a> (193K)
+
+
+<hr><a NAME="Choro03"></a><h3>
+Spatio-Temporal Models and Languages: An Approach Based on Data Types</h3>
+Ralf H. G&uuml;ting, Mike H. B&ouml;hlen, Martin Erwig, Christian S. Jensen,
+Nikos A. Lorentzos, Enrico Nardelli, and Markus Schneider. 
+Chapter 4 of <i>Spatio-Temporal Databases: The CHOROCHRONOS Approach</i>
+(eds. T. Sellis et al.), Springer Verlag, LNCS 2520, 97-146, 2003
+
+<p>We develop DBMS data models and query languages to deal with geometries
+changing over time. In contrast to most of the earlier work on this subject,
+these models and languages are capable of handling continuously changing
+geometries, or moving objects. We focus on two basic abstractions called
+moving point and moving region. A moving point can represent an entity for
+which only the position in space is relevant. A moving region captures moving
+as well as growing or shrinking regions. Examples for moving points are
+people, polar bears, cars, trains, or air planes; examples for moving regions
+are hurricanes, forest fires, or oil spills in the sea. The main line of
+research presented in this chapter takes a data type oriented approach. The
+idea is to view moving points and moving regions as three-dimensional
+(2D-space + time) or higher-dimensional entities whose structure and behavior
+is captured by modeling them as abstract data types. These data types can then
+be integrated as attribute types into relational, object-oriented, or other
+DBMS data models; they can be implemented as extension packages ("data
+blades") for suitable extensible DBMSs.
+
+
+<hr><a NAME="JVLC03b"></a><h3>
+A Visual Language for the Evolution of Spatial Relationships
+and its Translation into a Spatio-Temporal Calculus</h3>
+Martin Erwig and Markus Schneider. 
+<i><a href="http://store.elsevier.com/product.jsp?isbn=1045926X">
+Journal of Visual Languages and Computing</a>, Vol. 14</i>, 
+No. 2, 181-211, 2003
+<p>Queries about objects that change their spatial attributes over time become
+particularly interesting when they ask for changes in the spatial
+relationships between different objects. We propose a visual notation that
+is able to describe scenarios of changing object relationships. The visual
+language is based on the idea to analyze two-dimensional traces of moving
+objects to infer a temporal development of their mutual spatial
+relationships. We motivate the language design by successively simplifying
+object traces to their intrinsic properties. The notation can be effectively
+translated in to a calculus of spatio-temporal predicates that formally
+characterizes the evolution of spatial relationships. We also outline a user
+interface that supports specifications by menus and a drawing editor. The
+visual notation can be used directly as a visual query interface to
+spatio-temporal databases, or it can provide predicate specifications that
+can be integrated into textual query languages leading to heterogeneous 
+languages.
+<p><a href="VLEvolSpatialRel_JVLC02.ps.gz">Paper.ps.gz</a> (258K), 
+   <a href="VLEvolSpatialRel_JVLC02.pdf">Paper.pdf</a> (443K)
+
+
+<hr><a NAME="RULE02"></a><h3>
+A Rule-Based Language for Programming Software Updates</h3> Martin Erwig and Deling Ren.
+<i>3rd ACM SIGPLAN Workshop on Rule-Based Programming</i>
+<a href="http://www.program-transformation.org/twiki/bin/view/Transform/WorkshopOnRuleBasedProgramming">(RULE'02)</a>, 67-77, 2002
+
+<p>We describe the design of a rule-based language for expressing changes to
+Haskell programs in a systematic and reliable way. The update language
+essentially offers update commands for all constructs of the object language
+(a subset of Haskell).  The update language can be translated into a core
+calculus consisting of a small set of basic updates and update combinators.
+The key construct of the core calculus is a scope update mechanism that
+allows (and enforces) update specifications for the definition of a symbol
+together with all of its uses. 
+
+The type of an update program is given by the possible type changes it can
+cause for an object programs. We have developed a type-change inference system
+to automatically infer type changes for updates. Updates for which a type
+change can be successfully inferred and that satisfy an additional structural
+condition can be shown to preserve type correctness of object programs.
+
+In this paper we define the Haskell Update Language HULA and give a
+translation into the core update calculus. We illustrate HULA and its
+translation into the core calculus by several examples.
+<p>
+<!-- <a href="HULA_RULE02.ps.gz">Paper.ps.gz</a> (71K), <a href="HULA_RULE02.pdf">Paper.pdf</a> (134K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?38243">Paper.pdf</a> 
+(or here: 
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?694837">Paper.pdf</a>
+)
+
+
+
+<hr><a NAME="NSF02"></a><h3>
+Design of Spatio-Temporal Query Languages</h3>
+Martin Erwig. 
+<i><a href="http://www.calmit.unl.edu/BDEI/workshop.htm">NSF/BDEI Workshop on Spatio-Temporal Data Models of Biogeophysical Fields for Ecological Forecasting</a></i>, 
+2002
+<p>In contrast to the <i>field view</i> of spatial data that basically views
+spatial data as a mapping from points into some features, the <i>object
+view</i> clusters points by features and their values into spatial objects of type
+point, line, or region, which can then be integrated as abstract data types
+into a database system.
+
+We can apply the ADT idea to model spatio-temporal data and to integrate such
+ADTs into data models.  The basic idea is very simple and starts from the
+observation that anything that changes over time can be regarded as a function
+that maps from time into the data of consideration.
+
+The integration of spatio-temporal data types into data models supports the
+definition of a query languages because the interaction between ADT operations
+and general querying constructs is constrained to a few well-defined places,
+so that we are immediately able to pose spatio-temporal queries in a
+straightforward way.
+<p><a href="STQLDesign_NSF02.ps.gz">Paper.ps.gz</a> (96K), 
+   <a href="STQLDesign_NSF02.pdf">Paper.pdf</a> (180K)
+
+
+<hr><a NAME="MSTIS"></a><h3>
+STQL: A Spatio-Temporal Query Language</h3>
+Martin Erwig and Markus Schneider. 
+Chapter 6 of <i><a href="http://www.cs.uno.edu/~Kap/">
+Mining Spatio-Temporal Information Systems</a></i>, 
+(eds. R. Ladner, K. Shaw, and M. Abdelguerfi), Kluwer Academic Publishers,
+105-126, 2002
+<p>Integrating spatio-temporal data as abstract data types into
+already existing data models is a promising approach to creating
+spatio-temporal query languages. Based on a formal foundation presented
+elsewhere, we present the main aspects of an SQL-like, spatio-temporal query
+language, called STQL. As one of its essential features, STQL allows to query
+and to retrieve moving objects which describe continuous
+evolutions of spatial objects over time. We consider spatio-temporal
+operations that are particularly useful in formulating queries, such as the
+temporal lifting of spatial operations, the projection into space and time,
+selection, and aggregation.  Another important class of queries is concerned
+with developments, which are changes of spatial relationships over
+time. Based on the notion of spatio-temporal predicates we provide a
+framework in STQL that allows a user to build more and more complex predicates
+starting with a small set of elementary ones. We also describe a visual
+notation to express developments.
+<p><a href="STQL_MSTIS.ps.gz">Paper.ps.gz</a> (74K), 
+   <a href="STQL_MSTIS.pdf">Paper.pdf</a> (127K)
+
+
+<hr><a NAME="HCC02"></a><h3>
+Visually Customizing Inference Rules About Apples and Orange</h3> 
+Margaret M. Burnett and Martin Erwig.
+<i>2nd IEEE Int. Symp. on Human Centric Computing Languages and Environments</i>
+<a href="http://www2.informatik.uni-erlangen.de/HCC02/">(HCC'02)</a>,
+140-148, 2002
+<p>We have been working on a unit system for end-user spreadsheets that is based
+on the concrete notion of units instead of the abstract concept of types.  In
+previous work, we defined such a system formally.  In this paper, we describe
+a visual system to support the formal reasoning in two ways.  First, it
+supports communicating and explaining the unit inference process to users.
+Second and more important, our approach allows users to change the system's
+reasoning by adding and customizing the system's inference rules.
+<p><a href="CustomInfRules_HCC02.ps.gz">Paper.ps.gz</a> (92K),
+   <a href="CustomInfRules_HCC02.pdf">Paper.pdf</a> (93K)
+
+
+<hr><a NAME="PADL02"></a><h3>
+Adding Apples and Oranges</h3> Martin Erwig and Margaret M. Burnett.
+<i>4th Int. Symp. on Practical Aspects of Declarative Languages</i>
+<a href="http://www.cs.sunysb.edu/~padl2002/">(PADL'02)</a>,
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-43092-X">LNCS
+2257</a>, 173-191, 2002
+
+<p>We define a unit system for end-user spreadsheets that is based
+on the concrete notion of units instead of the abstract concept of types.
+Units are derived from header information given by spreadsheets. 
+The unit system contains concepts, such as dependent units, multiple units,
+and unit generalization, that allow the classification of spreadsheet contents
+on a more fine-grained level than types do. Also, because communication with
+the end user happens only in terms of objects that are contained in the
+spreadsheet, our system does not require end users to learn new abstract
+concepts of type systems.
+<p><a href="Apples_PADL02.ps.gz">Paper.ps.gz</a> (225K),
+   <a href="Apples_PADL02.pdf">Paper.pdf</a> (193K)
+
+
+<hr><a NAME="TKDE02"></a><h3>
+Spatio-Temporal Predicates</h3>
+Martin Erwig and Markus Schneider. 
+<i><a href="http://computer.org/TKDE/">
+IEEE Transactions on Knowledge and Data Engineering</a>, Vol. 14</i>, 
+No. 4, 881-901, 2002
+<p>This paper investigates temporal changes of topological
+relationships and thereby integrates two important research areas: first,
+two-dimensional topological relationships that have been investigated quite
+intensively, and second, the change of spatial information over time.
+We investigate spatio-temporal predicates, which describe developments of
+well-known spatial topological relationships.  A framework is developed in
+which spatio-temporal predicates can be obtained by temporal aggregation of
+elementary spatial predicates and sequential composition.  We compare our
+framework with two other possible approaches: one is based on the observation
+that spatio-temporal objects correspond to three-dimensional spatial objects
+for which existing topological predicates can be exploited.  The other
+approach is to consider possible transitions between spatial configurations.
+These considerations help to identify a canonical set of spatio-temporal
+predicates.
+<p><a href="STPredicates_TKDE02.ps.gz">Paper.ps.gz</a> (239K), 
+   <a href="STPredicates_TKDE02.pdf">Paper.pdf</a> (405K)
+
+<hr><a NAME="ASE01"></a><h3>
+Programs are Abstract Data Types</h3> Martin Erwig.
+<i>16th IEEE Int. Conf. on Automated Software Engineering</i>
+<a href="http://ase.informatik.uni-essen.de/">(ASE'01)</a>, 400-403, 2001
+<p>We propose to view programs as abstract data types and to perform program
+changes by applying well-defined operations on programs. The ADT view of
+programs goes beyond the approach of syntax-directed editors and proof-editors
+since it is possible to combine basic update operations into larger update
+programs that can be stored and reused. It is crucial for the design of update
+operations and their composition to know which properties they can preserve
+when they are applied to a program.
+<p>
+In this paper we argue in favor of the abstract data type view of programs,
+and present a general framework in which different programming languages,
+update languages, and properties can be studied. 
+<p><a href="ProgramADT_ASE01.ps.gz">Paper.ps.gz</a> (54K),
+   <a href="ProgramADT_ASE01.pdf">Paper.pdf</a> (120K)
+
+
+<hr><a NAME="JFP01"></a><h3>
+Inductive Graphs and Functional Graph Algorithms</h3> Martin Erwig. 
+<i><a href="http://www.dcs.gla.ac.uk/jfp/">
+Journal of Functional Programming</a>, Vol. 11</i>, No. 5, 467-492, 2001.
+<p>We propose a new style of writing graph algorithms in functional languages
+which is based on an alternative view of graphs as inductively defined data
+types. We show how this graph model can be implemented efficiently, and then
+we demonstrate how graph algorithms can be succinctly given by recursive
+function definitions based on the inductive graph view.
+We also regard this as a contribution to the teaching of algorithm and data
+structures in functional languages since we can use the functional-style
+graph algorithms instead of the imperative algorithms that are dominant today.
+<p><a href="InductiveGraphs_JFP01.ps.gz">Paper.ps.gz</a> (125K),
+   <a href="InductiveGraphs_JFP01.pdf">Paper.pdf</a> (297K)  
+<p><a href="../fgl/haskell/">Haskell Sources</a>
+
+
+<hr><a NAME="Haskell00"></a><h3>
+Pattern Guards and Transformational Patterns</h3>
+Martin Erwig and Simon Peyton Jones. 
+<i><a href="http://www.elsevier.nl/gej-ng/31/29/23/76/33/show/Products/notes/index.htt">
+Electronic Notes in Theoretical Computer Science</a>, Vol. 41</i>, 
+No. 1, 12.1-12.27, 2001
+<p>We propose three extensions to patterns and pattern matching in
+Haskell.  The first, <i>pattern guards,</i> allows the guards of a
+guarded equation to match patterns and bind variables, as well as to
+test boolean condition.  For this we introduce a natural
+generalization of guard <i>expressions</i> to guard <i>qualifiers.</i>
+A frequently-occurring special case is that a function should be applied to a
+matched value, and the result of this is to be matched against another pattern.
+For this we introduce a syntactic abbreviation, <i>transformational
+patterns,</i> that is particularly useful
+when dealing with views. 
+These proposals can be implemented with very modest syntactic and implementation
+cost. They are upward compatible with Haskell; all existing programs will
+continue to work.
+We also offer a third, much more speculative proposal, which provides
+the transformational-pattern construct with additional power to
+explicitly catch pattern match failure.
+We demonstrate the usefulness of the proposed extension by several examples,
+in particular, we compare our proposal with views, and we also discuss the use
+of the new patterns in combination with equational reasoning.
+<p><a href="PGandTP_Haskell00.dvi.gz">Paper.dvi.gz</a> (32K),
+   <a href="PGandTP_Haskell00.ps.gz">Paper.ps.gz</a> (72K),
+   <a href="PGandTP_Haskell00.pdf">Paper.pdf</a> (203K) 
+
+
+<hr><a NAME="XML00"></a><h3>
+XML Queries and Transformations for End Users</h3>
+Martin Erwig. 
+<a href="http://www.xmlusa.net">XML 2000</a>, 259-269, 2000
+<p>We propose a form-based interface to expresses XML queries and transformations
+by so-called "document patterns" that describe properties of the requested
+information and optionally specify how the found results should be reformatted
+or restructured. The interface is targeted at casual users who want a fast and
+easy way to find information in XML data resources.  By using dynamic forms an
+intuitive and easy-to-use interface is obtained that can be used to solve a
+wide spectrum of tasks, ranging from simple selections and projections to
+advanced data restructuring tasks. The interface is especially suited for end
+users since it can be used without having to learn a programming or query
+language and without knowing anything about (query or XML) language syntax,
+DTDs or schemas. Nevertheless, DTDs can be well exploited, in particular, on
+the user interface level to support the semi-automatic construction of
+queries.
+<p><a href="XMLEndUser_XML00.ps.gz">Paper.ps.gz</a> (146K),
+   <a href="XMLEndUser_XML00.pdf">Paper.pdf</a> (108K)
+<!--
+,
+<a href=XMLEndUser.tar.gz">Paper.xml.tar.gz</a> (72K) 
+,
+<a href=XMLEndUser.tar.gz">Paper.html</a> (72K) 
+-->
+
+<hr><a NAME="VL00"></a><h3>
+A Visual Language for XML</h3> Martin Erwig.
+<i>16th IEEE Symp. on Visual Languages</i>
+<a href="http://www.cs.orst.edu/~burnett/vl2000/">(VL 2000)</a>, 47-54, 2000
+<p>XML is becoming one of the most influential standards concerning data exchange
+and Web-presentations. In this paper we present a visual language for querying
+and transforming XML data. The language is based on a visual document metaphor
+and the notion of document patterns. It combines an intuitive, dynamic
+form-based interface for defining queries and transformation rules with
+powerful pattern matching capabilities and offers thus a highly expressive yet
+easy to use visual language. 
+Providing visual language support for XML not only helps end users, it is
+also a big opportunity for the VL community to receive greater attention.
+<p><a href="Xing_VL00.ps.gz">Paper.ps.gz</a> (54K),
+   <a href="Xing_VL00.pdf">Paper.pdf</a> (120K)
+
+
+<hr><a NAME="AMAST00"></a><h3>
+Random Access to Abstract Data Types</h3> Martin Erwig. 
+<i>8th Int. Conf. on Algebraic Methodology and Software Technology</i>
+<a href="http://www.cs.uiowa.edu/amast2000/">(AMAST 2000)</a>,
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-67530-2">LNCS
+1816</a>, 135-149, 2000
+<p>We show how to define recursion operators for random access data
+types, that is, ADTs that offer random access to their elements, and how
+algorithms on arrays and on graphs can be expressed by these operators.
+The approach is essentially based on a representation of ADTs as
+bialgebras that allows catamorphisms between ADTs to be defined by
+composing one ADT's algebra with the other ADT's coalgebra.  The
+extension to indexed data types enables the development of specific
+recursion schemes, which are, in particular, suited to express a large
+class of graph algorithms.
+<p><a href="RandomAccessADT_AMAST00.ps.gz">Paper.ps.gz</a> (127K),
+   <a href="RandomAccessADT_AMAST00.pdf">Paper.pdf</a> (227K),
+   <a href="RandomAccessADT_REPORT.ps.gz">Long Version.ps.gz</a> (136K),
+   <a href="RandomAccessADT_REPORT.pdf">Long Version.pdf</a> (252K)
+
+
+<hr><a NAME="SDH00"></a><h3>
+Formalization of Advanced Map Operations</h3>
+Martin Erwig and Markus Schneider. 
+<i>9th Int. Symp. on Spatial Data Handling</i>
+<a href="http://www.hku.hk/cupem/igugisc/sdh2000/mainframe.html">
+(SDH 2000)</a>, 8a.3-8a.17, 2000
+<p>Maps are a fundamental metaphor in GIS. We introduce several new
+operations on maps that go far beyond well-known operations like
+overlay or reclassification.  In particular, we identify and
+generalize operations that are of practical interest for spatial
+analysis and that can be useful in many GIS applications.  We give a
+precise definition of these operations based on a formal model of
+spatial partitions.  This provides a theoretical foundation for maps
+which also serves as a specification for implementations.
+<p><a href="AdvancedMapOps_SDH00.ps.gz">Paper.ps.gz</a> (96K),
+   <a href="AdvancedMapOps_SDH00.pdf">Paper.pdf</a> (178K)
+
+<hr><a NAME="VDB00"></a><h3>
+Query-By-Trace: Visual Predicate Specification in Spatio-Temporal Databases</h3>
+Martin Erwig and Markus Schneider. 
+<i>5th IFIP Conf. on Visual Databases</i>
+<a href="http://www.ynu.ac.jp/VDB5/">(VDB 5)</a>, 2000
+<p>In this paper we propose a visual interface for the specification of
+predicates to be used in queries on spatio-temporal databases. The approach is
+based on a visual specification method for temporally changing spatial
+situations. This extends existing concepts for visual spatial query languages,
+which are only capable of querying static spatial situations. We outline a
+preliminary user interface that supports the specification on an intuitive
+and easily manageable level, and we describe the design of the underlying
+visual language. The visual notation can be used directly as a visual query
+interface to spatio-temporal databases, or it can provide predicate
+specifications that can be integrated into textual query languages leading to
+heterogeneous languages.
+<p><a href="QueryByTrace_VDB00.ps.gz">Paper.ps.gz</a> (72K),
+   <a href="QueryByTrace_VDB00.pdf">Paper.pdf</a> (188K)
+
+
+<hr><a NAME="TODS00"></a><h3>
+A Foundation for Representing and Querying Moving Objects</h3> 
+Ralf H. G&uuml;ting, Mike H. B&ouml;hlen, Martin Erwig, Christian S. Jensen,
+Nikos A. Lorentzos, Markus Schneider, and Michalis Vazirgiannis. 
+<br><i><a href="http://www.acm.org/tods/">
+ACM Transactions on Database Systems,</a> Vol. 25</i>, No. 1, 1-42, 2000
+<br><b><i>Most Cited TODS Paper in Ten Years (1993-2004)</i></b>
+<p>Spatio-temporal databases deal with geometries changing over time. The goal
+of our work is to provide a DBMS data model and query language capable of
+handling such time-dependent geometries, including those changing continuously
+which describe moving objects.  Two fundamental abstractions are moving point
+and moving region, describing objects for which only the time-dependent
+position, or position and extent, are of interest, respectively. We propose to
+represent such time-dependent geometries as attribute data types with suitable
+operations, that is, to provide an abstract data type extension to a DBMS data
+model and query language. 
+<br><spacer TYPE="HORIZONTAL" SIZE="15">
+This paper presents a design of such a system of abstract data types. It
+turns out that besides the main types of interest, moving point and moving
+region, a relatively large number of auxiliary data types is needed. For
+example, one needs a line type to represent the projection of a moving point
+into the plane, or a "moving real" to represent the time-dependent distance of
+two moving points. It then becomes crucial to achieve (i) orthogonality in the
+design of the type system, i.e., type constructors can be applied uniformly,
+(ii) genericity and consistency of operations, i.e., operations range over as
+many types as possible and behave consistently, and (iii) closure and
+consistency between structure and operations of non-temporal and related
+temporal types. Satisfying these goals leads to a simple and expressive system
+of abstract data types that may be integrated into a query language to yield a
+powerful language for querying spatio-temporal data, including moving objects.
+The paper formally defines the types and operations, offers detailed insight
+into the considerations that went into the design, and exemplifies the use of
+the abstract data types using SQL. The paper offers a precise and conceptually
+clean foundation for implementing a spatio-temporal DBMS extension.
+<p>
+<!-- <a href="FoundMovingObjects_TODS00.ps.gz">Paper.ps.gz</a> (143K), <a href="FoundMovingObjects_TODS00.pdf">Paper.pdf</a> (518K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?02298">Paper.pdf</a>
+
+
+
+<hr><a NAME="Networks00"></a><h3>
+The Graph Voronoi Diagram with Applications</h3> Martin Erwig. 
+<i>Networks, Vol 36</i>, No. 3, 156-163, 2000
+<p>The Voronoi diagram is a famous structure of computational geometry.
+We show that there is a straightforward equivalent in graph theory
+which can be efficiently computed.  In particular, we give two
+algorithms for the computation of graph Voronoi diagrams, prove a
+lower bound on the problem, and we identify cases where the algorithms
+presented are optimal.  The space requirement of a graph Voronoi
+diagram is modest, since it needs no more space than the graph itself.
+<br><spacer TYPE="HORIZONTAL" SIZE="15">
+The investigation of graph Voronoi diagrams is motivated by many
+applications and problems on networks that can be easily solved with
+their help. This includes the computation of
+nearest facilities, all nearest neighbors and closest pairs,
+some kind of collision free moving, and anti-centers and closest
+points.
+<p><a href="GraphVoronoi_Networks00.ps.gz">Paper.ps.gz</a> (123K),
+   <a href="GraphVoronoi_Networks00.pdf">Paper.pdf</a> (252K)
+
+
+<hr><a NAME="VL99"></a><h3>
+Visual Graphs</h3> Martin Erwig
+<i>15th IEEE Symp. on Visual Languages</i>
+<a href="http://www.isl.hiroshima-u.ac.jp/vl99.html">(VL'99)</a></i>, 122-129, 1999
+<p>The formal treatment of visual languages is often based on
+graph representations. Since the matter of discourse is
+visual languages, it would be convenient if the formal
+manipulations could be performed in a visual way. We
+introduce visual graphs to support this goal. In a visual
+graph some nodes are shown as geometric figures, and
+some edges are represented by geometric relationships
+between these figures. We investigate mappings between
+visual and abstract graphs and show their application in
+semantics definitions for visual languages and in formal
+manipulations of visual programs.
+<p><a href="VisualGraphs_VL99.ps.gz">Paper.ps.gz</a> (72K),
+   <a href="VisualGraphs_VL99.pdf">Paper.pdf</a> (67K)
+
+
+<hr><a NAME="VL99b"></a><h3>
+Visual Specifications of Spatio-Temporal Developments</h3>
+Martin Erwig and Markus Schneider
+<i>15th IEEE Symp. on Visual Languages</i>
+<a href="http://www.isl.hiroshima-u.ac.jp/vl99.html">(VL'99)</a></i>, 187-188, 1999
+<p>We introduce a visual language for the specification of
+temporally changing spatial situations. The main idea is
+to represent spatio-temporal (ST) objects in a two-dimensional
+way by their trace. The intersections of these traces with
+other objects are interpreted and translated into sequences
+of spatial and spatio-temporal predicates, called developments,
+that can then be used, for example, to query spatio-temporal
+databases.
+<p><a href="VisualDevelopments_VL99.ps.gz">Summary.ps.gz</a> (29K),
+   <a href="VisualDevelopments_VL99.pdf">Summary.pdf</a> (15K)
+
+
+<hr><a NAME="STDBM99"></a><h3>
+The Honeycomb Model of Spatio-Temporal Partitions</h3>
+Martin Erwig and Markus Schneider
+<i>Int. Workshop on Spatio-Temporal Database Management</i>
+<a href="http://timelab.co.umist.ac.uk/events/stdbm99/">(STDBM'99)</a>,
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-66401-7">LNCS
+1678</a>, 39-59, 1999
+<p>We define a formal model of spatio-temporal partitions which can be
+used to model temporally changing maps.&nbsp; We investigate new applications
+and generalizations of operations that are well-known for static, spatial
+maps.&nbsp; We then define a small set of operations on spatio-temporal
+partitions that are powerful enough to express all these tasks and more.&nbsp;
+Spatio-temporal partitions combine the general notion of temporal objects
+and the powerful spatial partition abstraction into a new, highly expressive
+spatio-temporal data modeling tool.
+<p><a href="Honeycomb_STDBM99.ps.gz">Paper.ps.gz</a> (73K),
+   <a href="Honeycomb_STDBM99.pdf">Paper.pdf</a> (256K)
+
+
+<hr><a NAME="STDML99"></a><h3>
+Developments in Spatio-Temporal Query Languages</h3>
+Martin Erwig and Markus Schneider
+<i><a href="http://lbdwww.epfl.ch/e/conferences/DEXA/cfp.html">
+IEEE Int. Workshop on Spatio-Temporal Data Models and Languages</a></i>, 
+441-449, 1999
+<p>Integrating spatio-temporal data as abstract data types into already
+existing data models is a promising approach to creating spatio-temporal
+query languages.&nbsp; In this context, an important new class of queries
+can be identified which is concerned with developments of spatial objects
+over time, that is, queries ask especially for changes in spatial relationships.&nbsp;
+Based on a definition of the notion of spatio-temporal predicate we provide
+a framework which allows to build more and more complex predicates starting
+with a small set of elementary ones.&nbsp; These predicates can be well
+used to characterize developments.&nbsp; We show how these concepts can
+be realized within the relational data model.&nbsp; In particular, we demonstrate
+how SQL can be extended to enable the querying of developments.
+<p><a href="Developments_STDML99.dvi.gz">Paper.dvi.gz</a> (27K), 
+   <a href="Developments_STDML99.ps.gz">Paper.ps.gz</a> (38K),
+   <a href="Developments_STDML99.pdf">Paper.pdf</a> (133K)
+
+
+<hr><a NAME="GEOINF99"></a><h3>
+Spatio-Temporal Data Types: An Approach to Modeling and Querying Moving
+Objects in Databases</h3>
+Martin Erwig, Ralf H. G&uuml;ting, Markus Schneider, and Michalis Vazirgiannis.
+<i><a href="http://www.wkap.nl/journalhome.htm/1384-6175">
+GeoInformatica</a>, Vol. 3</i>, No. 3, 269-296, 1999
+<p>Spatio-temporal databases deal with geometries changing over time.
+In general, geometries cannot only change in discrete steps, but continuously,
+and we are talking about moving objects. If only the position in
+space of an object is relevant, then <i>moving point</i> is a basic abstraction;
+if also the extent is of interest, then the <i>moving region</i> abstraction
+captures moving as well as growing or shrinking regions.&nbsp; We propose
+a new line of research where moving points and moving regions are viewed
+as three-dimensional (2D space + time) or higher-dimensional entities whose
+structure and behavior is captured by modeling them as abstract data types.
+Such types can be integrated as base (attribute) data types into relational,
+object-oriented, or other DBMS data models; they can be implemented as
+data blades, cartridges, etc. for extensible DBMSs. We expect
+these spatio-temporal data types to play a similarly fundamental role for
+spatio-temporal databases as spatial data types have played for spatial
+databases. The paper explains the approach and discusses several
+fundamental issues and questions related to it that need to be clarified
+before delving into specific designs of spatio-temporal algebras.
+<p><a href="MovingObjects_GEOINF99.ps.gz">Paper.ps.gz</a> (86K),
+   <a href="MovingObjects_GEOINF99.pdf">Paper.pdf</a> (101K)
+
+
+<hr><a NAME="JFP98"></a><h3>
+Diets for Fat Sets</h3> Martin Erwig. 
+<i><a href="http://www.dcs.gla.ac.uk/jfp/">
+Journal of Functional Programming</a>, Vol. 8</i>, No. 6, 627-632, 1998
+<p>In this paper we describe the <i>discrete interval encoding tree</i>
+for storing subsets of types having a total order and a predecessor and
+a successor function. We consider for simplicity only the case for integer
+sets; the generalization is not difficult. The discrete interval encoding
+tree is based on the observation that the set of integers 
+{ <i>i</i>| <i>a&lt;=i&lt;=b</i>}
+can be perfectly represented by the closed interval [ <i>a, b</i>]. The
+general idea is to represent a set by a binary search tree of integers
+in which maximal adjacent subsets are each represented by an interval.
+For instance, inserting the sequence of numbers [6, 9, 2, 13, 8, 14, 10,
+7, 5] into a binary search tree, respectively, into an discrete interval
+encoding tree results in the tree structures shown below:
+<center><img SRC="diet.gif" height=136 width=326></center>
+After defining operations for inserting, searching, and deleting elements,
+we give a best-, worst- and average-case analysis. We also comment upon
+some applications and compare actual running times.
+<p><a href="Diet_JFP98.dvi.gz">Paper.dvi.gz</a> (10K), 
+   <a href="Diet_JFP98.ps.gz">Paper.ps.gz</a> (30K),
+   <a href="Diet_JFP98.pdf">Paper.pdf</a> (149K)
+<p><a href="../diet">ML and Haskell Sources</a>
+
+
+<hr><a NAME="JVLC98"></a><h3>
+Abstract Syntax and Semantics of Visual Languages</h3> Martin Erwig. 
+<i><a href="http://store.elsevier.com/product.jsp?isbn=1045926X">
+Journal of Visual Languages and Computing</a>, Vol. 9</i>, No. 5, 461-483, 1998
+<p>The effective use of visual languages requires a precise understanding
+of their meaning. Moreover, it is impossible to prove properties of visual
+languages like soundness of transformation rules or correctness results
+without having a formal language definition. Although this sounds obvious,
+it is surprising that only little work has been done about the semantics
+of visual languages, and even worse, there is no general framework available
+for the semantics specification of different visual languages. We present
+such a framework that is based on a rather general notion of abstract visual
+syntax. This framework allows a logical as well as a denotational approach
+to visual semantics, and it facilitates the formal reasoning about visual
+languages and their properties. We illustrate the concepts of the proposed
+approach by defining abstract syntax and semantics for the visual languages
+VEX, Show and Tell, and Euler Circles. We demonstrate the semantics in
+action by proving a rule for visual reasoning with Euler Circles and by
+showing the correctness of a Show and Tell program.
+<p><a href="VLSemantics_JVLC98.ps.gz">Paper.ps.gz</a> (87K),
+   <a href="VLSemantics_JVLC98.pdf">Paper.pdf</a> (97K)
+
+
+<hr><a NAME="AMAST98"></a><h3>
+Categorical Programming with Abstract Data Types</h3> Martin Erwig. 
+<i>7th Int. Conf. on Algebraic Methodology and Software Technology</i>
+<a href="http://www.lmf-di.puc-rio.br/~amast98">(AMAST'98)</a>,
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-65462-3">LNCS
+1548</a>, 406-421, 1998
+<p>We show how to define fold operators for abstract data types. The main
+idea is to represent an ADT by a bialgebra, that is, an algebra/coalgebra
+pair with a common carrier. A program operating on an ADT is given by a
+mapping to another ADT. Such a mapping, called <i>metamorphism,</i> is
+basically a composition of the algebra of the second with the coalgebra
+of the first ADT. We investigate some properties of metamorphisms, and
+we show that the metamorphic programming style offers far-reaching opportunities
+for program optimization that cover and even extend those known for algebraic
+data types.
+<p><a href="CategoricalADT_AMAST98.dvi.gz">Paper.dvi.gz</a> (27K), 
+   <a href="CategoricalADT_AMAST98.ps.gz">Paper.ps.gz</a> (53K),
+   <a href="CategoricalADT_AMAST98.pdf">Paper.pdf</a> (224K)
+<p><a href="../meta">Haskell Source Files and Related Papers</a>
+
+
+<hr><a NAME="NEWDB98"></a><h3>
+Temporal Objects for Spatio-Temporal Data Models and a Comparison of Their
+Representations</h3> Martin Erwig, Markus Schneider, and Ralf H. G&uuml;ting
+<br><i>Int. Workshop on Advances in Database Technologies,</i>
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-65690-1">LNCS
+1552</a>, 454-465, 1998
+<p>Currently, there are strong efforts to integrate spatial and temporal
+database technology into spatio-temporal database systems. This paper
+views the topic from a rather fundamental perspective and makes several
+contributions. First, it reviews existing temporal and spatial data models
+and presents a completely new approach to temporal data modeling based
+on the very general notion of temporal object. The definition of temporal
+objects is centered around the observation that anything that changes over
+time can be expressed as a function over time.  For the modeling of spatial
+objects the well known concept of spatial data types is employed. As specific
+subclasses, linear temporal and spatial objects are identified. Second,
+the paper proposes the database embedding of temporal objects by means
+of the abstract data type approach to the integration of complex objects
+into databases. Furthermore, we make statements about the expressiveness
+of different temporal and spatial database embeddings. Third, we consider
+the combination of temporal and spatial objects into spatio-temporal objects
+in (relational) databases.  We explain various alternatives for spatio-temporal
+data models and databases and compare their expressiveness. Spatio-temporal
+objects turn out to be specific instances of temporal objects.
+<p><a href="TemporalObjects_NEWDB98.ps.gz">Paper.ps.gz</a> (75K),
+   <a href="TemporalObjects_NEWDB98.pdf">Paper.pdf</a> (69K)
+
+
+<hr><a NAME="ACMGIS98"></a><h3>
+Abstract and Discrete Modeling of Spatio-Temporal Data Types</h3>
+Martin Erwig, Ralf H. G&uuml;ting, Markus Schneider, and Michalis Vazirgiannis.
+<br><i>6th ACM Symp. on Geographic Information Systems</i>
+<a href="http://www.insa-lyon.fr/Laboratoires/LISI/ACMGIS/">(ACMGIS'98)</a>,
+131-136, 1998
+<p>Spatio-temporal databases deal with geometries changing over time. In
+general, geometries cannot only change in discrete steps, but continuously,
+and we are talking about moving objects. If only the position in space
+of an object is relevant, then moving point is a basic abstraction; if
+also the extent is of interest, then the moving region abstraction captures
+moving as well as growing or shrinking regions. We propose a new line of
+research where moving points and moving regions are viewed as three-dimensional
+(2D space + time) or higher-dimensional entities whose structure and behavior
+is captured by modeling them as abstract data types. Such types can be
+integrated as base (attribute) data types into relational, object-oriented,
+or other DBMS data models; they can be implemented as data blades, cartridges,
+etc. for extensible DBMSs. We expect these spatio-temporal data types to
+play a similarly fundamental role for spatio-temporal databases as spatial
+data types have played for spatial databases. In this paper we consider
+the need for modeling spatio-temporal data types on two different levels
+of abstraction.
+<p>
+<!-- <a href="ModelingSTDT_ACMGIS98.ps.gz">Paper.ps.gz</a> (53K), <a href="ModelingSTDT_ACMGIS98.pdf">Paper.pdf</a> (57K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?71861">Paper.pdf</a>
+
+
+<hr><a NAME="IFL98"></a><h3>
+The Categorical Imperative - Or: How to Hide Your State Monads</h3> Martin Erwig. 
+<i>10th Int. Workshop on Implementation of Functional Languages</i>
+<a href="http://www.cs.ucl.ac.uk/staff/ifl98/">(IFL'98)</a>, 1-25, 1998
+<p>
+We demonstrate a systematic way of introducing state monads to improve
+the efficiency of data structures. When programs are expressed as transformations
+of abstract data types - which becomes possible by suitable definitions
+of ADTs and ADT fold operations, we can observe restricted usage patterns
+for ADTs, and this can be exploited to derive (i) partial data structures
+correctly implementing the ADTs and (ii) imperative realizations of these
+partial data structures. With a library of ADTs together with (some of)
+their imperative implementations, efficient versions of functional programs
+can be obtained without being concerned or even knowing about state monads. 
+As one example we demonstrate the optimization of a graph ADT resulting
+in an optimal imperative implementation of depth-first search.
+<p><a href="CategoricalImperative_IFL98.dvi.gz">Paper.dvi.gz</a> (29K),
+   <a href="CategoricalImperative_IFL98.ps.gz">Paper.ps.gz</a> (55K),
+   <a href="CategoricalImperative_IFL98.pdf">Paper.pdf</a> (239K)
+<p><a href="../meta">Haskell Source Files and Related Papers</a>
+
+
+<hr><a NAME="VL98"></a><h3>
+Visual Semantics - Or: What You See is What You Compute</h3> Martin Erwig. 
+<i>14th IEEE Symp. on Visual Languages</i>
+<a href="http://www.pictorius.com/vl98/">(VL'98)</a>, 96-97, 1998
+<p>In this paper we introduce visual graphs as an intermediate representation
+between concrete visual syntax and abstract graph syntax. In a visual graph
+some nodes are shown as geometric figures, and some edges are represented
+by geometric relationships between these figures. By carefully designing
+visual graphs and corresponding mappings to abstract syntax graphs, semantics
+definitions can, at least partially, employ a visual notation while still
+being based on abstract syntax. Visual semantics thus offers the "best
+of both worlds" by integrating abstract syntax and visual notation. We
+also demonstrate that these concepts can be used to give visual semantics
+for traditional textual formalisms. As an example we provide a visual definition
+of Turing machines.
+<p><a href="VisualSemantics_VL98.ps.gz">Summary.ps.gz</a> (31K),
+   <a href="VisualSemantics_VL98.pdf">Summary.pdf</a> (20K)
+
+
+<hr><a NAME="COSIT97"></a><h3>
+Partition and Conquer</h3> Martin Erwig and Markus Schneider. 
+<i>3rd Int. Conf. on Spatial Information Theory</i>
+<a href="http://www.lis.pitt.edu/~cosit97/">(COSIT'97)</a>,
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-63623-4">LNCS
+1329</a>, 389-408, 1997
+<p>Although maps and partitions are ubiquitous in geographical information
+systems and spatial databases, there is only little work investigating
+their foundations. We give a rigorous definition for spatial partitions
+and propose partitions as a generic spatial data type that can be used
+to model arbitrary maps and to support spatial analysis. We identify a
+set of three powerful operations on partitions and show that the type of
+partitions is closed under them. These basic operators are sufficient to
+express all known application-specific operations. Moreover, many map operations
+will be considerably generalized in our framework. We also indicate that
+partitions can be effectively used as a meta-model to describe other spatial
+data types.
+<p><a href="Partitions_COSIT97.ps.gz">Paper.ps.gz</a> (80K),
+   <a href="Partitions_COSIT97.pdf">Paper.pdf</a> (92K)
+
+
+<hr><a NAME="IFL97"></a><h3>
+Fully Persistent Graphs - Which One to Choose?</h3> Martin Erwig. <i>
+9th Int. Workshop on Implementation of Functional Languages</i>
+<a href="http://www.dcs.st-and.ac.uk/~ifl97">(IFL'97)</a>,
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-64849-6">LNCS
+1467</a>, 123-140, 1997
+<p>Functional programs, by nature, operate on functional, or persistent,
+data structures. Therefore, persistent graphs are a prerequisite to express
+functional graph algorithms. In this paper we describe two implementations
+of persistent graphs and compare their running times on different graph
+problems. Both implementations essentially represent graphs as adjacency
+lists. The first structure uses the version tree implementation of functional
+arrays to make adjacency lists persistent. An array cache of the newest
+graph version together with a time stamping technique for speeding up deletions
+makes it asymptotically optimal for a class of graph algorithms that use
+graphs in a single-threaded way. The second approach uses balanced search
+trees to implement adjacency lists. For both structures we also consider
+several variations, e.g., ignoring edge labels or predecessor information.
+<p><a href="PersistentGraphs_IFL97.ps.gz">Paper.ps.gz</a> (60K),
+   <a href="PersistentGraphs_IFL97.pdf">Paper.pdf</a> (68K)
+
+
+<hr><a NAME="VL97"></a><h3>
+Semantics of Visual Languages</h3> Martin Erwig. 
+<i>13th IEEE Symp. on Visual Languages</i> 
+<a href="http://www.unisa.it/vl97/vl97.html">(VL'97)</a>, 304-311, 1997
+<p>The effective use of visual languages requires a precise understanding
+of their meaning. Moreover, it is impossible to prove properties of visual
+languages like soundness of transformation rules or correctness results
+without having a formal language definition. Although this sounds obvious,
+it is surprising that only little work has been done about the semantics
+of visual languages, and even worse, there is no general framework available
+for the semantics specification of different visual languages. We present
+such a framework that is based on a rather general notion of abstract visual
+syntax. This framework allows a logical as well as a denotational approach
+to visual semantics, and it facilitates the formal reasoning about visual
+languages and their properties. We illustrate the concepts of the proposed
+approach by defining abstract syntax and semantics for the visual languages
+VEX, Show and Tell, and Euler Circles. For the latter we also prove a rule
+for visual reasoning.
+<p><a href="VLSemantics_VL97.ps.gz">Paper.ps.gz</a> (80K),
+   <a href="VLSemantics_VL97.pdf">Paper.pdf</a> (95K)
+
+
+<hr><a NAME="TVL97"></a><h3>
+Abstract Visual Syntax</h3> Martin Erwig. 
+<i>2nd IEEE Int. Workshop on Theory of Visual Languages</i>
+<a href="http://www.pst.informatik.uni-muenchen.de/~bmeyer/TVL97/tvl97-home.html">
+(TVL'97)</a>, 15-25, 1997
+<p>We propose a separation of visual syntax into concrete and abstract
+syntax, much like it is often done for textual languages. Here the focus
+is on visual programming languages; the impact on visual languages in general
+is not clear by now. We suggest to use unstructured labeled multi-graphs
+as abstract visual syntax and show how this facilitates semantics definitions
+and transformations of visual languages. In particular, disregarding structural
+constraints on the abstract syntax level makes such manipulations simple
+and powerful. Moreover, we demonstrate that - in contrast to the traditional
+monolithic graph definition - an inductive view of graphs provides a very
+convenient way to move in a structured (and declarative) way through graphs.
+Again this supports the simplicity of descriptions for transformations
+and semantics.
+<p><a href="VLSyntax_TVL97.ps.gz">Paper.ps.gz</a> (54K),
+   <a href="VLSyntax_TVL97.pdf">Paper.pdf</a> (57K)
+<p>
+<a href="http://gg.ulstu.ru/articles/abstract_visual_syntax_martin_erwig.html">
+Russian Translation</a>
+
+
+
+<hr><a NAME="SSD97"></a><h3>
+Vague Regions</h3> Martin Erwig and Markus Schneider. 
+<i>5th Int. Symp. on Advances in Spatial Databases</i> 
+<a href="http://www.inf.fu-berlin.de/~ssd97/">(SSD'97)</a>,
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-63238-7">LNCS
+1262</a>, 298-320, 1997
+<p>In many geographical applications there is a need to model spatial phenomena
+not simply by sharp objects, but rather through indeterminate or vague
+concepts. To support such applications we present a model of vague regions
+which covers and extends previous approaches. The formal framework is based
+on a general exact model of spatial data types. On the one hand, this simplifies
+the definition of the vague model since we can build upon already existing
+theory of spatial data types, on the other hand, this approach facilitates
+the migration from exact to vague models. Moreover, exact spatial data
+types are subsumed as a special case of the presented vague concepts. We
+present examples and show how they are represented within our framework.
+We give a formal definition of basic operations and predicates which particularly
+allow a more fine-grained investigation of spatial situations than in the
+pure exact case. We also demonstrate the integration of the presented concepts
+into an SQL-like query language.
+<p><a href="VagueRegions_SSD97.ps.gz">Paper.ps.gz</a> (87K),
+   <a href="VagueRegions_SSD97.pdf">Paper.pdf</a> (117K)
+
+
+<hr><a NAME="ICFP97"></a><h3>
+Functional Programming with Graphs</h3> Martin Erwig. 
+<i>2nd ACM SIGPLAN Int. Conf. on Functional Programming</i>
+<a href="http://www.wins.uva.nl/research/func/icfp97.html">(ICFP'97)</a>,
+52-65, 1997
+<br>(also in: <i>ACM SIGPLAN Notices, Vol. 32,</i>No. 8, Aug
+1997, pp. 52-65)
+<p>Graph algorithms expressed in functional languages often suffer from
+their inherited imperative, state-based style. In particular, this impedes
+formal program manipulation. We show how to model persistent graphs in
+functional languages by graph constructors. This provides a decompositional
+view of graphs which is very close to that of data types and leads to a
+``more functional'' formulation of graph algorithms. Graph constructors
+enable the definition of general fold operations for graphs. We present
+a promotion theorem for one of these folds that allows program fusion and
+the elimination of intermediate results. Fusion is not restricted to the
+elimination of tree-like structures, and we prove another theorem that
+facilitates the elimination of intermediate graphs. We describe an ML-implementation
+of persistent graphs which efficiently supports the presented fold operators.
+For example, depth-first-search expressed by a fold over a functional graph
+has the same complexity as the corresponding imperative algorithm.
+<p>
+<!-- <a href="FPwithGraphs_ICFP97.ps.gz">Paper.ps.gz</a> (62K), <a href="FPwithGraphs_ICFP97.pdf">Paper.pdf</a> (242K) -->
+<img src="http://dl.acm.org/images/oa.gif" width="25" height="25" border="0" alt="ACM DL Author-ize service" style="vertical-align:middle"/>
+<a href="http://dl.acm.org/authorize?88121">Paper.pdf</a>
+<p>
+<a href="../fgl/ml/gr.tar.gz">ML-Source.tar.gz</a> (7K), for an improved
+implementation, have a look at the 
+<a href="../fgl">Functional Graph Library</a>
+
+
+<hr><a NAME="IFL96"></a><h3>
+Active Patterns</h3> Martin Erwig. 
+<i>8th Int. Workshop on Implementation of Functional Languages</i>
+<a href="http://www.informatik.uni-kiel.de/inf/Kluge/calendar/ifl96.html">(IFL'96)</a>,
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-63237-9">LNCS
+1268</a>, 21-40, 1996
+<p>Active patterns apply preprocessing functions to data type values before
+they are matched. This is of use for unfree data types where more than
+one representation exists for an abstract value: In many cases there is
+a specific representation for which function definitions become very simple,
+and active patterns just allow to assume this specific representation in
+function definitions. We define the semantics of active patterns and describe
+their implementation.
+<p><a href="ActivePatterns_IFL96.dvi.gz">Paper.dvi.gz</a> (30K), 
+   <a href="ActivePatterns_IFL96.ps.gz">Paper.ps.gz</a> (57K),
+   <a href="ActivePatterns_IFL96.pdf">Paper.pdf</a> (245K)
+
+
+<hr><a NAME="VL95"></a><h3>
+Heterogeneous Visual Languages - Integrating Visual and Textual Programming</h3>
+Martin Erwig and Bernd Meyer. <i>11th IEEE Symp. on Visual Languages</i>
+<a href="http://www.pu.informatik.th-darmstadt.de/vl95/">(VL'95)</a>,
+318-325, 1995
+<p>After more than a decade of research, visual languages have still not
+become everyday programming tools. On a short term, an integration of visual
+languages with well-established (textual) programming languages may be
+more likely to meet the actual requirements of practical software development
+than the highly ambitious goal of creating purely visual languages. In
+such an integration each paradigm can support the other where it is superior.
+Particularly attractive is the use of visual expressions for the description
+of domain-specific data structures in combination with textual notations
+for abstract control structures. In addition to a basic framework for heterogeneous
+languages, we outline the design of a development system that allows rapid
+prototyping of implementations of heterogeneous languages. Examples will
+be presented from the domains of logical, functional, and procedural languages.
+<p><a href="HeteroVisualPL_VL95.ps.gz">Paper.ps.gz</a> (66K),
+   <a href="HeteroVisualPL_VL95.pdf">Paper.pdf</a> (63K)
+
+
+<hr><a NAME="Networks95"></a><h3>
+Encoding Shortest Paths in Spatial Networks</h3> Martin Erwig.
+<i>Networks, Vol. 26,</i>291-303, 1995
+<p>A new data structure is presented which facilitates the search for shortest
+paths in spatially embedded planar networks in a worst-case time of O(<i>l</i>
+log <i>r</i>) where <i>l</i> is the number of edges in the shortest path
+to be found and <i>r</i> is an upper bound on the number of so-called ``cross
+edges'' (these are edges connecting, for any node <i>v</i>, different shortest
+path subtrees rooted at <i>v</i>'s successors). The data structure is based
+on the idea to identify shortest path subtrees with the regions in the
+plane they cover. In the worst-case the space requirement is O(<i>rn</i>),
+which, in general, is O(<i>n</i>^2), but for regularly shaped networks
+it is expected to be only O(<i>n</i>\sqrt(<i>n</i>)). A decomposition of
+graphs into bi-connected components can be used to reduce the sizes of
+the trees to be encoded and to reduce the complexity of the regions for
+these trees. The decomposition also simplifies the algorithm for computing
+encoding regions, which is based on minimum link paths in polygons. Approximations
+for region boundaries can effectively be utilized to speed up the process
+of shortest path reconstruction: For a realistically constrained class
+of networks, i.e., networks in which the ratio of the shortest path distance
+between any two points to the Euclidean distance between these points is
+bounded by a constant, it is shown that an average searching time of O(<i>l</i>)
+can be achieved.
+
+
+<hr><a NAME="VL94"></a><h3>
+DEAL - A Language for Depicting Algorithms</h3>
+Martin Erwig. <i>10th IEEE Symp. on Visual Languages (VL'94),</i>184-185,
+1994
+<p>Algorithms can be regarded as instructions for building and/or changing
+data structures. In order to describe algorithms visually we need (i) a
+visual representation of data structures, and (ii) a (visual) representation
+of modifications.
+<br><spacer TYPE="HORIZONTAL" SIZE="15">An instructive way for explaining
+algorithms found in many data structure textbooks is to describe changes
+in data structures by drawing a picture showing the situation before the
+change and a picture denoting the modified structure. We believe that following
+this tradition is a good policy for developing a visual algorithmic language.
+Thus, we will utilize data type icons to denote objects of a certain type,
+and we will use action rules for describing changes in pictures and the
+denoted data structures.
+<br><spacer TYPE="HORIZONTAL" SIZE="15">Since typical operations often
+work on subparts of a larger data structure (e.g., add a node to a tree
+or exchange two elements of an array) it is convenient to be able to denote
+parts of data structures. In the presented language this is achieved by
+attaching labels to data type icons at specific positions. Some label positions
+denote unique parts of the data type whereas other locations mean collections
+of subobjects. The latter case is exploited to implicitly describe iterations
+over objects in complex data structures. Let us convey a concrete impression
+by an example. The action rule that is shown in the following Figure introduces
+bindings for variables denoting parts of an array <i>A</i> on the left
+side and describes changes to be performed on <i>A</i> by relocating labels
+on the right side (exchange <i>y</i> and <i>z</i>).
+<center>
+<p><img SRC="bubblesort.gif" ALT="Bubblesort Picture" height=34 width=222></center>
+<p>The variables <i>i</i> and <i>j</i> below the array denote indices which
+are interpreted by (nested) loops over <i>A</i>: Here, by default, the
+first loop for <i>i</i> ranges from 1 to <i>n</i>, and the inner loop for
+<i>j</i>
+runs from <i>n</i> down to <i>i</i>. The lower bound of this loop is given
+by the condition under the arrow, <i>j</i>> <i>i</i>, which also specifies
+the direction of the loop (> means descending). The condition above the
+arrow restricts the action described by the right side: The array elements
+<i>y</i>
+and <i>z</i> are only exchanged if <i>y</i>&lt; <i>z</i>. Since the label
+<i>z</i>
+is located directly adjacent to <i>y</i> both labels are interpreted as
+adjacent array elements.
+<br><spacer TYPE="HORIZONTAL" SIZE="15">Pattern matching is a very powerful
+feature used by many modern functional languages, such as ML or Haskell,
+to define functions on structured data. We will use icon patterns, showing
+the composition of complex data structures, for distinguishing arguments
+for different cases of action rules and building new structures. Specifically,
+in building new array structures the concept of array comprehensions is
+extremely useful. An array comprehension is an expression [<i>x</i> \in
+<i>A</i>
+| <i>P</i>(<i>x</i>)] denoting a new array <i>B</i> consisting of all elements
+of <i>A</i> for which condition <i>P</i> is true. The order of the elements
+of <i>B</i> is the same as in <i>A</i>. One or more array comprehensions
+are displayed by an array icon with one or more variables inside (i.e.,
+not denoting the first or last element in the array) for which the conditions
+are given above the arrow symbol. Consider, e.g., the recursive function
+definition of Quicksort:
+<center>
+<p><img SRC="quicksort.gif" ALT="Quicksort Picture" height=93 width=376></center>
+<p>The icon above the box describes how to apply the defined function.
+The action rule inside the box initially binds <i>x</i> to <i>A</i>[1]
+(since the label <i>x</i> is located at the beginning of the array icon)
+and describes three array comprehensions: [<i>a</i> \in <i>A</i> | <i>a</i>&lt;
+<i>x</i>],
+[<i>b</i> \in <i>A</i> | <i>b</i>=<i>x</i>], and [<i>c</i> \in
+<i>A</i>
+| <i>c</i>> <i>x</i>]. The pattern on the the right side appends the three
+new arrays defined by the array comprehensions where the quicksort function
+is recursively applied to the first and to the third one.
+<br><spacer TYPE="HORIZONTAL" SIZE="15">In this paper, we compare our visual
+language with other approaches, and we provide a formal definition together
+with describing the translation into a textual algorithmic language.
+
+
+<hr><a NAME="TKDE94"></a><h3>
+Explicit Graphs in a Functional Model for Spatial Databases</h3>
+Martin Erwig and Ralf H. G&uuml;ting. 
+<i>IEEE Transactions on Knowledge and Data Engineering, Vol. 5,</i>No. 6, 787-804, 1994
+<p>Observing that networks are ubiquitous in applications for spatial databases,
+we define a new data model and query language that especially supports
+graph structures. This model integrates concepts of functional data modeling
+with order-sorted algebra. Besides object and data type hierarchies graphs
+are available as an explicit modeling tool, and graph operations are part
+of the query language. Graphs have three classes of components, namely
+nodes, edges, and explicit paths. These are at the same time object types
+within the object type hierarchy and can be used like any other type. Explicit
+paths are useful because ``real world'' objects often correspond to paths
+in a network. Furthermore, a dynamic generalization concept is introduced
+to handle heterogeneous collections of objects in a query. In connection
+with spatial data types this leads to powerful modeling and querying capabilities
+for spatial databases, in particular for spatially embedded networks such
+as highways, rivers, public transport, and so forth. We use multi-level
+order-sorted algebra as a formal framework for the specification of our
+model. Roughly spoken, the first level algebra defines types and operations
+of the query language whereas the second level algebra defines kinds (collections
+of types) and type constructors as functions between kinds and so provides
+the types that can be used at the first level.
+<p><a href="XGraphsInSpatialDB_TKDE94.ps.gz">Paper.ps.gz</a> (123K),
+   <a href="XGraphsInSpatialDB_TKDE94.pdf">Paper.pdf</a> (147K), 
+   <a href="XGraphsInSpatialDB_REPORT.ps.gz">Long Version (Report).ps.gz</a> (156K),
+   <a href="XGraphsInSpatialDB_REPORT.pdf">Long Version (Report).pdf</a> (181K)
+
+
+<hr><a NAME="thesis"></a><h3>
+Graphs in Spatial Databases</h3>
+Martin Erwig. Doctoral Thesis, FernUniversit&auml;t Hagen, 1994
+<p>This thesis investigates the integration of graph structures into spatial
+databases. We consider three different perspectives:
+<br><spacer TYPE="HORIZONTAL" SIZE="15">First and foremost, we define a
+functional data model extended by spatial datatypes to which graphs are
+added by means of special type constructors. Graphs are defined as an orthogonal,
+``first-class'', concept of the model which enables the clear modeling
+of applications and the direct formulation of graph queries. The latter
+is achieved by presenting the functional model within an algebraic setting
+where graph operations are directly available as functions. In order to
+give a precise account for extending algebras by polymorphic type constructors
+we introduce the formalism of multi-level algebra which allows the description
+of type systems as well as languages within one formal framework. Multi-level
+algebra is capable of expressing very subtle details of type systems, such
+as preventing type constructors from being nested or describing operations
+with a variable number of arguments. These features are needed by the functional
+model which is entirely specified by the multi-level algebra formalism.
+<br><spacer TYPE="HORIZONTAL" SIZE="15">Second, realizing that all interesting
+computations on graph structures cannot be captured by a small set of operators
+--- at least not in an efficient way --- we develop a programming language
+for the specification of graph algorithms. This is done by formulating
+a powerful exploration paradigm which regards a large class of graph algorithms
+as iterations over graph elements. The exact behavior of explorations is
+primarily determined by special data structures which are supplied as arguments
+to exploration operators. This graph language is defined and implemented
+as an extension of ML. The integration with ML allows an even larger class
+of graph problems to be addressed. The design of the language is chosen
+on the one hand to provide very succinct and clear descriptions of graph
+algorithms and on the other hand to retain an efficient implementation.
+The second aspect is achieved by introducing recursive array definitions
+which are the formal backbone of the computations performed during explorations.
+Recursive arrays are a new means for introducing mutable state in an efficient
+and at the same time declarative way into functional languages.
+<br><spacer TYPE="HORIZONTAL" SIZE="15">Finally, we propose data structures
+and algorithms supporting the efficient realization of some very important
+graph operations. The first is a geometric index for encoding shortest
+paths. The idea is to represent shortest path (sub-) trees by the regions
+they cover in the plane. Point location in these regions is then used to
+reconstruct shortest paths. Concerning space and time complexity the proposed
+structure outperforms previous proposals in some practically relevant classes
+of graphs. The second structure is the graph Voronoi diagram which is a
+partition of the nodes in a graph according to shortest paths to a set
+of reference nodes. We give efficient algorithms for the construction of
+graph Voronoi diagrams and show their use by presenting numerous example
+queries which are perfectly supported by this structure.
+
+
+<hr><a NAME="AMAST93"></a><h3>
+Specifying Type Systems with Multi-Level Order-Sorted Algebra</h3> Martin Erwig. 
+<i>3rd Int. Conf. on Algebraic Methodology and Software Technology (AMAST'93),</i>177-184, 1993
+<p>We propose to use order-sorted algebras (OSA) on multiple levels to
+describe languages together with their type systems. It is demonstrated
+that even advanced aspects can be modeled, including, parametric polymorphism,
+complex relationships between different sorts of an operation's rank, the
+specification of a variable number of parameters for operations, and type
+constructors using values (and not only types) as arguments.
+<br><spacer TYPE="HORIZONTAL" SIZE="15">The basic idea is to use a signature
+to describe a type system where sorts denote sets of type names and operations
+denote type constructors. The values of an algebra for such a signature
+are then used as sorts of another signature now describing a language having
+the previously defined type system. This way of modeling is not restricted
+to two levels, and we will show useful applications of three-level algebras.
+<p><a href="MultiLevelAlgebra_AMAST93.dvi.gz">Paper.dvi.gz</a> (16K), 
+   <a href="MultiLevelAlgebra_AMAST93.ps.gz">Paper.ps.gz</a> (44K),
+   <a href="MultiLevelAlgebra_AMAST93.pdf">Paper.pdf</a> (221K)
+
+
+<hr><a NAME="WG92"></a><h3>
+Graph Algorithms = Iteration + Data Structures? The Structure of Graph
+Algorithms and a Corresponding Style of Programming</h3>
+Martin Erwig. <i>18th Int. Workshop on Graph Theoretic Concepts in Computer
+Science (WG'92),</i>
+<a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-56402-0">LNCS
+657</a>, 277-292, 1992
+<p>We encourage a specific view of graph algorithms, which can be paraphrased
+by "iterate over the graph elements in a specific order and perform computations
+in each step". Data structures will be used to define the processing order,
+and we will introduce recursive mapping/array definitions as a vehicle
+for specifying the desired computations. Being concerned with the problem
+of implementing graph algorithms, we outline the extension of a functional
+programming language by graph types and operations. In particular, we explicate
+an exploration operator that essentially embodies the proposed view of
+algorithms. Fortunately, the resulting specifications of algorithms, in
+addition to being compact and declarative, are expected to have an almost
+as efficient implementation as their imperative counterparts.
+<p><a href="GraphAlg=Iter+DS_WG92.dvi.gz">Paper.dvi.gz</a> (24K), 
+   <a href="GraphAlg=Iter+DS_WG92.ps.gz">Paper.ps.gz</a> (55K),
+   <a href="GraphAlg=Iter+DS_WG92.pdf">Paper.pdf</a> (246K)
+
+
+<hr><a NAME="DBPL91"></a><h3>
+A Functional DBPL Revealing High Level Optimizations</h3>
+Martin Erwig and Udo W. Lipeck. 
+<i>3rd Int. Workshop on Database Programming Languages (DBPL3),</i>306-321, 1991
+<p>We present a functional DBPL in the style of FP that facilitates the
+definition of precise semantics and opens up opportunities for far-reaching
+optimizations. The language is integrated into a functional data model,
+which is extended by arbitrary type hierarchies and complex objects. Thus
+we are able to provide the clarity of FP-like programs together with the
+full power of semantic data modeling. To give an impression of the special
+facilities for optimizing functional database languages, we point out some
+laws not presented before which enable access path selection already on
+the algebraic level of optimization. The algebraic way of access path optimization
+also gives new insights into optimization strategies.
+<p><a href="FunctionalDBPL_DBPL91.ps.gz">Paper.ps.gz</a> (68K),
+   <a href="FunctionalDBPL_DBPL91.pdf">Paper.pdf</a> (217K)
+
+<ADDRESS>
+<hr size=1 noshade>
+<table width=100% border=0 cellspacing=0>
+<tr>
+<td><font face=Candara,Helvetica,Arial size=2>
+    last change: June 4, 2014</font></td>
+<td align=right><font face=Candara,Helvetica,Arial size=2><i>
+     <a href="http://eecs.oregonstate.edu/~erwig/">Martin Erwig</a>
+&nbsp<a href="mailto:erwig@eecs.oregonstate.edu">erwig@eecs.oregonstate.edu</a>
+    </i></font></td>
+</tr>
+</table>
+</ADDRESS></body>
+</html>
+
+  
